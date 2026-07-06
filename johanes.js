@@ -69,12 +69,14 @@ boutonsFiltre.forEach(function (btn) {
 // ===== WHATSAPP : OUVERTURE INTELLIGENTE =====
 function ouvrirWhatsApp(numero, texte) {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const message = texte ? `?text=${encodeURIComponent(texte)}` : "";
+  // Encoder le texte correctement (les retours à la ligne deviennent %0A)
+  const messageEncoded = texte ? encodeURIComponent(texte) : "";
+  const messageParam = messageEncoded ? `?text=${messageEncoded}` : "";
 
   // Vérifier si WhatsApp est installé sur Android
   if (isMobile && /Android/i.test(navigator.userAgent)) {
     // Tentative d'ouverture avec intent
-    const intent = `intent://send/${numero}${message ? "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F${numero}${message};end" : "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;end"}`;
+    const intent = `intent://send/${numero}${messageParam ? "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F${numero}${messageParam};end" : "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;end"}`;
 
     // Ouvrir avec intent
     const win = window.open(intent, "_system");
@@ -82,15 +84,15 @@ function ouvrirWhatsApp(numero, texte) {
     // Fallback si l'appli n'est pas installée
     setTimeout(function () {
       if (!win || win.closed || typeof win.closed === "undefined") {
-        window.location.href = `https://wa.me/${numero}${message}`;
+        window.location.href = `https://wa.me/${numero}${messageParam}`;
       }
     }, 800);
   } else if (isMobile && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
     // iOS : utiliser l'URL directe (ouvre l'appli)
-    window.location.href = `https://wa.me/${numero}${message}`;
+    window.location.href = `https://wa.me/${numero}${messageParam}`;
   } else {
     // Ordinateur : WhatsApp Web dans un nouvel onglet
-    window.open(`https://wa.me/${numero}${message}`, "_blank");
+    window.open(`https://wa.me/${numero}${messageParam}`, "_blank");
   }
 }
 
@@ -119,7 +121,8 @@ if (formulaire) {
 
     if (message) {
       const numero = "261387587959";
-      const texte = `Bonjour, je suis ${nom}.%0A%0A${message}`;
+      // Construction du message avec vrais retours à la ligne
+      const texte = `Bonjour, je suis ${nom}.\n\n${message}`;
       ouvrirWhatsApp(numero, texte);
       this.reset();
       boutonEnvoi.setAttribute("disabled", "");
@@ -241,25 +244,3 @@ if (overlay) {
     }
   });
 }
-
-// ===== GESTION DES LIENS WHATSAPP =====
-// Remplacer les liens WhatsApp par la fonction intelligente
-document.querySelectorAll(".lien-whatsapp").forEach(function (lien) {
-  // Si le lien a un data-numero, on garde l'événement onclick déjà présent
-  // Sinon, on ajoute un comportement par défaut
-  if (!lien.hasAttribute("data-numero")) {
-    const href = lien.getAttribute("href") || "";
-    const match = href.match(/(\d{10,15})/);
-    if (match) {
-      lien.setAttribute("data-numero", match[1]);
-      lien.setAttribute("href", "#");
-      lien.addEventListener("click", function (e) {
-        e.preventDefault();
-        const numero = this.getAttribute("data-numero");
-        if (numero) {
-          ouvrirWhatsApp(numero);
-        }
-      });
-    }
-  }
-});

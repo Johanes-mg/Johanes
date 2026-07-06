@@ -1,3297 +1,0 @@
---- FICHIER : C:\xampp\htdocs\Johanes\index.html ---
-<!doctype html>
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio de Johanès Falitiana - Développeur web, desktop et mobile à Madagascar"
-    />
-    <meta
-      name="keywords"
-      content="développeur, portfolio, web, mobile, Madagascar, Python, React"
-    />
-    <meta name="author" content="Johanès Falitiana" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Portfolio - Johanès Falitiana" />
-    <meta
-      property="og:description"
-      content="Colorons le monde au-dela des lignes🎨"
-    />
-    <meta property="og:image" content="./images/og-image.png" />
-    <meta property="og:url" content="https://johanes.dev" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <title>Portfolio - Johanès Falitiana</title>
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
-
-    <!-- Préchargement des polices -->
-    <link
-      rel="preload"
-      href="./fonts/Poppins-Regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="./fonts/Poppins-SemiBold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
-    <link rel="stylesheet" href="./johanes.css" />
-  </head>
-
-  <body>
-    <main>
-      <!-- Barre latérale -->
-      <aside class="barre-laterale" data-barre>
-        <div class="info-principale">
-          <figure class="cadre-avatar">
-            <img
-              src="./images/j.png"
-              alt=""
-              width="80"
-              height="80"
-              loading="lazy"
-            />
-          </figure>
-
-          <div class="contenu-info">
-            <h1 class="nom" title="Johanès">Johanès Falitiana</h1>
-            <p class="titre">Développeur</p>
-          </div>
-
-          <button
-            class="btn-plus-info"
-            data-btn-info
-            aria-label="Afficher les contacts"
-          >
-            <span>Afficher les contacts</span>
-            <img
-              src="./images/icone-fleche-bas.png"
-              alt=""
-              width="16"
-              height="16"
-              loading="lazy"
-            />
-          </button>
-        </div>
-
-        <div class="info-sup">
-          <div class="separateur"></div>
-
-          <!-- Bouton thème -->
-          <div class="theme-toggle-wrapper">
-            <button
-              class="btn-theme"
-              onclick="basculerTheme()"
-              title="Changer de thème"
-              aria-label="Changer de thème"
-            >
-              <img
-                src="./images/icone-soleil.png"
-                alt=""
-                id="theme-icon"
-                width="24"
-                height="24"
-                loading="lazy"
-              />
-            </button>
-          </div>
-
-          <div class="separateur"></div>
-
-          <ul class="liste-contacts">
-            <li class="item-contact">
-              <div class="boite-icone">
-                <img
-                  src="./images/gmail.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info-contact">
-                <p class="titre-contact">Email</p>
-                <a
-                  href="mailto:falitianajohanes@gmail.com"
-                  class="lien-contact"
-                  aria-label="Envoyer un email"
-                  >johanesfalitiana@gmail.com</a
-                >
-              </div>
-            </li>
-
-            <li class="item-contact">
-              <div class="boite-icone">
-                <img
-                  src="./images/telephone.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info-contact">
-                <p class="titre-contact">Téléphone</p>
-                <a
-                  href="#"
-                  class="lien-contact lien-whatsapp"
-                  aria-label="Contacter via WhatsApp"
-                  data-numero="261387587959"
-                  onclick="
-                    ouvrirWhatsApp('261387587959');
-                    return false;
-                  "
-                >
-                  0387587959
-                </a>
-              </div>
-            </li>
-
-            <li class="item-contact">
-              <div class="boite-icone">
-                <img
-                  src="./images/calendar.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info-contact">
-                <p class="titre-contact">Anniversaire</p>
-                <time datetime="2006-07-13">13 Juillet 2006</time>
-              </div>
-            </li>
-
-            <li class="item-contact">
-              <div class="boite-icone">
-                <img
-                  src="./images/madagascar.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  loading="lazy"
-                />
-              </div>
-              <div class="info-contact">
-                <p class="titre-contact">Localisation</p>
-                <address>Fianarantsoa, Madagascar</address>
-              </div>
-            </li>
-          </ul>
-
-          <div class="separateur"></div>
-
-          <!-- Images réseaux sociaux (sans liens) -->
-          <ul class="liste-reseaux">
-            <li class="item-reseau">
-              <img
-                src="./images/facebook.png"
-                alt=""
-                width="28"
-                height="28"
-                loading="lazy"
-              />
-            </li>
-            <li class="item-reseau">
-              <img
-                src="./images/twitter.png"
-                alt=""
-                width="28"
-                height="28"
-                loading="lazy"
-              />
-            </li>
-            <li class="item-reseau">
-              <img
-                src="./images/linkedin.png"
-                alt=""
-                width="28"
-                height="28"
-                loading="lazy"
-              />
-            </li>
-          </ul>
-        </div>
-      </aside>
-
-      <!-- Contenu principal -->
-      <div class="contenu-principal">
-        <!-- Navigation -->
-        <nav class="navigation" aria-label="Navigation principale">
-          <ul class="liste-navigation">
-            <li class="item-nav">
-              <button class="lien-nav actif" data-page-nav aria-current="page">
-                À propos
-              </button>
-            </li>
-            <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Parcours</button>
-            </li>
-            <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Compétences</button>
-            </li>
-            <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Projets</button>
-            </li>
-            <li class="item-nav">
-              <button class="lien-nav" data-page-nav>Contact</button>
-            </li>
-          </ul>
-        </nav>
-
-        <!-- Page À propos -->
-        <article class="page page-a-propos actif" data-page="à propos">
-          <header>
-            <h2 class="titre-article">À propos de moi</h2>
-          </header>
-
-          <section class="texte-a-propos">
-            <p>
-              Je suis Johanès Falitiana, un développeur passionné basé à
-              Fianarantsoa, Madagascar. Je travaille sur divers projets allant
-              du développement desktop et mobile au web, en passant par la
-              création multimédia. J'aime transformer des problèmes complexes en
-              solutions simples, fonctionnelles et esthétiques.
-            </p>
-            <p>
-              Mon objectif est de créer des applications performantes,
-              ergonomiques et visuellement attrayantes. Je maîtrise plusieurs
-              langages et technologies et je m'adapte rapidement aux besoins de
-              chaque projet. Je suis également passionné par la musique, le
-              design et la création de contenu.
-            </p>
-          </section>
-
-          <!-- Services -->
-          <section class="services">
-            <h3 class="titre-service">Ce que je fais</h3>
-
-            <ul class="liste-services">
-              <li class="item-service">
-                <div class="boite-icone-service">
-                  <img
-                    src="./images/icon-code.png"
-                    alt=""
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="contenu-service">
-                  <h4 class="titre-item-service">
-                    Développement Desktop &amp; Mobile
-                  </h4>
-                  <p class="texte-service">
-                    Conception d'applications desktop avec C++, C#, Python, Qt6
-                    et d'applications mobiles Android avec Kotlin.
-                  </p>
-                </div>
-              </li>
-
-              <li class="item-service">
-                <div class="boite-icone-service">
-                  <img
-                    src="./images/icone-web.png"
-                    alt=""
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="contenu-service">
-                  <h4 class="titre-item-service">Développement Web</h4>
-                  <p class="texte-service">
-                    Conception de sites web et applications web avec HTML, CSS,
-                    JavaScript, PHP, React et bases de données.
-                  </p>
-                </div>
-              </li>
-
-              <li class="item-service">
-                <div class="boite-icone-service">
-                  <img
-                    src="./images/icone-multimedia.png"
-                    alt=""
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="contenu-service">
-                  <h4 class="titre-item-service">Multimédia</h4>
-                  <p class="texte-service">
-                    Création de contenu visuel et audio : montage vidéo, design
-                    graphique, production musicale et UI/UX Design.
-                  </p>
-                </div>
-              </li>
-
-              <li class="item-service">
-                <div class="boite-icone-service">
-                  <img
-                    src="./images/icone-bureautic.png"
-                    alt=""
-                    width="40"
-                    height="40"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="contenu-service">
-                  <h4 class="titre-item-service">Bureautique</h4>
-                  <p class="texte-service">
-                    Maîtrise de la suite Microsoft Office (Word, Excel,
-                    PowerPoint, Access) pour la gestion, l'analyse et la
-                    présentation de données.
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!-- Page Parcours -->
-        <article class="page page-parcours" data-page="parcours">
-          <header>
-            <h2 class="titre-article">Parcours</h2>
-          </header>
-
-          <!-- Académique -->
-          <section class="ligne-temps">
-            <div class="en-tete-section">
-              <div class="boite-icone">
-                <img
-                  src="./images/icone-academic.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="titre-section">Académique</h3>
-            </div>
-
-            <ol class="liste-ligne-temps">
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Université</h4>
-                <span>2025 - Présent</span>
-                <p class="texte-ligne">École Nationale d'Informatique.</p>
-              </li>
-
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Baccalauréat</h4>
-                <span>2024</span>
-                <p class="texte-ligne">Baccalauréat série D.</p>
-              </li>
-
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">BEPC</h4>
-                <span>2021</span>
-                <p class="texte-ligne">Brevet d'Études du Premier Cycle.</p>
-              </li>
-
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">CEPE</h4>
-                <span>2017</span>
-                <p class="texte-ligne">
-                  Certificat d'Études Primaires Élémentaires.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <!-- Formation -->
-          <section class="ligne-temps">
-            <div class="en-tete-section">
-              <div class="boite-icone">
-                <img
-                  src="./images/icone-formation.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="titre-section">Formation</h3>
-            </div>
-
-            <ol class="liste-ligne-temps">
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Français</h4>
-                <span>2026</span>
-                <p class="texte-ligne">Alliance Française</p>
-              </li>
-
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Anglais</h4>
-                <span>2024 - 2025</span>
-                <p class="texte-ligne">
-                  International Tesol/TEFL Training Institute
-                </p>
-              </li>
-
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">Bureautique à CFEI</h4>
-                <span>2024</span>
-                <p class="texte-ligne">
-                  Centre de Formation en Electronique et Informatique.
-                </p>
-              </li>
-            </ol>
-          </section>
-
-          <!-- Expérience -->
-          <section class="ligne-temps">
-            <div class="en-tete-section">
-              <div class="boite-icone">
-                <img
-                  src="./images/icone-xp.png"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </div>
-              <h3 class="titre-section">Expérience</h3>
-            </div>
-
-            <ol class="liste-ligne-temps">
-              <li class="item-ligne-temps">
-                <h4 class="titre-item-ligne">.</h4>
-                <span>.</span>
-                <p class="texte-ligne">.</p>
-              </li>
-            </ol>
-          </section>
-        </article>
-
-        <!-- Page Compétences -->
-        <article class="page page-competences" data-page="compétences">
-          <header>
-            <h2 class="titre-article">Mes compétences</h2>
-          </header>
-
-          <section class="competences">
-            <ul class="liste-competences carte-contenu">
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Python</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 80%"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Développement Desktop</h5>
-                  <data value="75">75%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 75%"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Développement Web</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 85%"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Applications Mobiles</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 70%"
-                    role="progressbar"
-                    aria-valuenow="70"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">UI/UX Design</h5>
-                  <data value="80">80%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 80%"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Montage / Production</h5>
-                  <data value="70">70%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 70%"
-                    role="progressbar"
-                    aria-valuenow="70"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Malagasy</h5>
-                  <data value="99">99%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 100%"
-                    role="progressbar"
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Français</h5>
-                  <data value="95">95%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 95%"
-                    role="progressbar"
-                    aria-valuenow="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-
-              <li class="item-competence">
-                <div class="en-tete-competence">
-                  <h5 class="nom-competence">Anglais</h5>
-                  <data value="85">85%</data>
-                </div>
-                <div class="fond-barre">
-                  <div
-                    class="barre-competence"
-                    style="width: 85%"
-                    role="progressbar"
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!-- Page Projets -->
-        <article class="page page-projets" data-page="projets">
-          <header>
-            <h2 class="titre-article">Projets</h2>
-          </header>
-
-          <section class="projets">
-            <!-- Filtres -->
-            <ul class="liste-filtres" role="tablist">
-              <li class="item-filtre" role="tab">
-                <button class="actif" data-btn-filtre aria-selected="true">
-                  Tous
-                </button>
-              </li>
-              <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">Web</button>
-              </li>
-              <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">
-                  Applications
-                </button>
-              </li>
-              <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">Outils</button>
-              </li>
-            </ul>
-
-            <!-- Sélecteur mobile -->
-            <div class="boite-select-filtre">
-              <button
-                class="select-filtre"
-                data-select
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <span class="valeur-select" data-select-valeur
-                  >Sélectionner une catégorie</span
-                >
-                <span class="icone-select">
-                  <img
-                    src="./images/icone-fleche-bas.png"
-                    alt=""
-                    width="16"
-                    height="16"
-                    loading="lazy"
-                  />
-                </span>
-              </button>
-
-              <ul class="liste-select" role="listbox">
-                <li class="item-select" role="option">
-                  <button data-select-item>Tous</button>
-                </li>
-                <li class="item-select" role="option">
-                  <button data-select-item>Web</button>
-                </li>
-                <li class="item-select" role="option">
-                  <button data-select-item>Applications</button>
-                </li>
-                <li class="item-select" role="option">
-                  <button data-select-item>Outils</button>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Liste des projets -->
-            <ul class="liste-projets">
-              <li
-                class="item-projet actif"
-                data-filtre-item
-                data-categorie="web"
-              >
-                <a
-                  href="#"
-                  onclick="
-                    ouvrirLightbox('./images/projet-ramp.png', 'RAMP');
-                    return false;
-                  "
-                  aria-label="Voir le projet RAMP"
-                >
-                  <figure class="image-projet">
-                    <div class="icone-oeil">
-                      <img
-                        src="./images/search.png"
-                        alt=""
-                        width="24"
-                        height="24"
-                        loading="lazy"
-                      />
-                    </div>
-                    <img
-                      src="./images/projet-ramp.png"
-                      alt=""
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                    />
-                  </figure>
-                  <h3 class="titre-projet">RAMP</h3>
-                  <p class="categorie-projet">Web - HTML5, CSS3, JavaScript</p>
-                </a>
-              </li>
-
-              <li
-                class="item-projet actif"
-                data-filtre-item
-                data-categorie="web"
-              >
-                <a
-                  href="#"
-                  onclick="
-                    ouvrirLightbox(
-                      './images/projet-jojohexpress.png',
-                      'JojohExpress',
-                    );
-                    return false;
-                  "
-                  aria-label="Voir le projet JojohExpress"
-                >
-                  <figure class="image-projet">
-                    <div class="icone-oeil">
-                      <img
-                        src="./images/search.png"
-                        alt=""
-                        width="24"
-                        height="24"
-                        loading="lazy"
-                      />
-                    </div>
-                    <img
-                      src="./images/projet-jojohexpress.png"
-                      alt=""
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                    />
-                  </figure>
-                  <h3 class="titre-projet">JojohExpress</h3>
-                  <p class="categorie-projet">Web - HTML5, CSS3, JS, PHP</p>
-                </a>
-              </li>
-
-              <li
-                class="item-projet actif"
-                data-filtre-item
-                data-categorie="web"
-              >
-                <a
-                  href="#"
-                  onclick="
-                    ouvrirLightbox('./images/projet-schoolar.png', 'Schoolar');
-                    return false;
-                  "
-                  aria-label="Voir le projet Schoolar"
-                >
-                  <figure class="image-projet">
-                    <div class="icone-oeil">
-                      <img
-                        src="./images/search.png"
-                        alt=""
-                        width="24"
-                        height="24"
-                        loading="lazy"
-                      />
-                    </div>
-                    <img
-                      src="./images/projet-schoolar.png"
-                      alt=""
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                    />
-                  </figure>
-                  <h3 class="titre-projet">Schoolar</h3>
-                  <p class="categorie-projet">Web - React, PHP, Chart.js</p>
-                </a>
-              </li>
-
-              <li
-                class="item-projet actif"
-                data-filtre-item
-                data-categorie="outils"
-              >
-                <a
-                  href="#"
-                  onclick="
-                    ouvrirLightbox(
-                      './images/projet-copyboost.png',
-                      'CopyBoost',
-                    );
-                    return false;
-                  "
-                  aria-label="Voir le projet CopyBoost"
-                >
-                  <figure class="image-projet">
-                    <div class="icone-oeil">
-                      <img
-                        src="./images/search.png"
-                        alt=""
-                        width="24"
-                        height="24"
-                        loading="lazy"
-                      />
-                    </div>
-                    <img
-                      src="./images/projet-copyboost.png"
-                      alt=""
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                    />
-                  </figure>
-                  <h3 class="titre-projet">CopyBoost</h3>
-                  <p class="categorie-projet">
-                    Outils - C#, .NET 8.0, Robocopy
-                  </p>
-                </a>
-              </li>
-
-              <li
-                class="item-projet actif"
-                data-filtre-item
-                data-categorie="applications"
-              >
-                <a
-                  href="#"
-                  onclick="
-                    ouvrirLightbox('./images/projet-jbacc.png', 'JBacc');
-                    return false;
-                  "
-                  aria-label="Voir le projet JBacc"
-                >
-                  <figure class="image-projet">
-                    <div class="icone-oeil">
-                      <img
-                        src="./images/search.png"
-                        alt=""
-                        width="24"
-                        height="24"
-                        loading="lazy"
-                      />
-                    </div>
-                    <img
-                      src="./images/projet-jbacc.png"
-                      alt=""
-                      loading="lazy"
-                      width="400"
-                      height="250"
-                    />
-                  </figure>
-                  <h3 class="titre-projet">JBacc</h3>
-                  <p class="categorie-projet">Application - Kotlin, Android</p>
-                </a>
-              </li>
-            </ul>
-          </section>
-        </article>
-
-        <!-- Page Contact -->
-        <article class="page page-contact" data-page="contact">
-          <header>
-            <h2 class="titre-article">Contact</h2>
-          </header>
-
-          <section class="info-contact-simple">
-            <p>
-              <strong>Pour me contacter :</strong>
-              <a
-                href="#"
-                class="lien-whatsapp"
-                aria-label="Me contacter sur WhatsApp"
-                data-numero="261387587959"
-                onclick="
-                  ouvrirWhatsApp('261387587959');
-                  return false;
-                "
-              >
-                +261 38 75 879 59
-              </a>
-            </p>
-          </section>
-
-          <section class="formulaire-contact">
-            <h3 class="titre-formulaire">Envoyez-moi un message</h3>
-
-            <form action="#" class="formulaire" data-formulaire novalidate>
-              <div class="groupe-champs">
-                <input
-                  type="text"
-                  name="nom"
-                  class="champ-formulaire"
-                  placeholder="Nom complet"
-                  required
-                  aria-required="true"
-                  data-champ
-                />
-              </div>
-
-              <textarea
-                name="message"
-                class="champ-formulaire"
-                placeholder="Votre message"
-                required
-                aria-required="true"
-                data-champ
-              ></textarea>
-
-              <button
-                class="btn-formulaire"
-                type="submit"
-                disabled
-                data-btn-formulaire
-                aria-label="Envoyer le message"
-              >
-                <img
-                  src="./images/send.png"
-                  alt=""
-                  width="18"
-                  height="18"
-                  loading="lazy"
-                />
-                <span>Envoyer</span>
-              </button>
-            </form>
-          </section>
-        </article>
-      </div>
-    </main>
-
-    <!-- Lightbox -->
-    <div
-      class="lightbox-overlay"
-      onclick="fermerLightbox()"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Agrandissement d'image"
-    >
-      <div class="lightbox-contenu">
-        <button
-          class="btn-fermer-lightbox"
-          onclick="fermerLightbox()"
-          aria-label="Fermer"
-        >
-          X
-        </button>
-        <img src="" alt="" id="lightbox-image" />
-        <div class="titre-lightbox" id="lightbox-titre"></div>
-      </div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="./johanes.js" defer></script>
-  </body>
-</html>
---- FICHIER : C:\xampp\htdocs\Johanes\johanes.css ---
-@font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("./fonts/Poppins-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-li {
-  list-style: none;
-}
-img,
-a,
-button,
-time,
-span {
-  display: block;
-}
-button {
-  font: inherit;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: inherit;
-}
-input,
-textarea {
-  display: block;
-  width: 100%;
-  background: none;
-  font: inherit;
-  color: inherit;
-}
-
-html {
-  font-family: "Poppins", sans-serif;
-  scroll-behavior: smooth;
-}
-body {
-  background: #0d0d0d;
-  color: #ccc;
-  overflow-x: hidden;
-}
-
-.barre-laterale,
-.page {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 20px;
-  padding: 15px;
-  z-index: 1;
-}
-
-.separateur {
-  width: 100%;
-  height: 1px;
-  background: #2a2a2a;
-  margin: 16px 0;
-}
-
-.boite-icone {
-  background: #2a2a2a;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  color: #8b5cf6;
-  flex-shrink: 0;
-}
-.boite-icone img {
-  display: block;
-  width: 18px;
-  height: 18px;
-  filter: none;
-}
-
-.page {
-  display: none;
-}
-.page.actif {
-  display: block;
-}
-
-.titre-article {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 600;
-  padding-bottom: 7px;
-  margin-bottom: 30px;
-  border-bottom: 3px solid #8b5cf6;
-}
-
-.carte-contenu {
-  background: #222;
-  padding: 15px;
-  border-radius: 14px;
-}
-
-main {
-  margin: 0;
-  padding: 15px;
-  min-width: 259px;
-}
-
-.barre-laterale {
-  margin-bottom: 15px;
-  max-height: 112px;
-  overflow: hidden;
-}
-.barre-laterale.actif {
-  max-height: 450px;
-}
-
-.barre-laterale::-webkit-scrollbar {
-  width: 4px;
-}
-.barre-laterale::-webkit-scrollbar-track {
-  background: transparent;
-}
-.barre-laterale::-webkit-scrollbar-thumb {
-  background: #8b5cf6;
-  border-radius: 10px;
-}
-
-.info-principale {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-}
-.cadre-avatar {
-  background: #2a2a2a;
-  border-radius: 20px;
-  flex-shrink: 0;
-}
-.cadre-avatar img {
-  border-radius: 20px;
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-}
-
-.nom {
-  color: #fff;
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.titre {
-  color: #fff;
-  background: #2a2a2a;
-  font-size: 11px;
-  font-weight: 300;
-  padding: 3px 12px;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.btn-plus-info {
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  border-radius: 0 15px;
-  font-size: 13px;
-  color: #8b5cf6;
-  background: #2a2a2a;
-  padding: 10px;
-  z-index: 1;
-}
-.btn-plus-info span {
-  display: none;
-}
-.btn-plus-info img {
-  display: block;
-  width: 16px;
-  height: 16px;
-  filter: none;
-}
-
-.info-sup {
-  opacity: 0;
-  visibility: hidden;
-}
-.barre-laterale.actif .info-sup {
-  opacity: 1;
-  visibility: visible;
-}
-
-.theme-toggle-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 5px 0;
-}
-
-.btn-theme {
-  background: #2a2a2a;
-  border: 1px solid #333;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.btn-theme:hover {
-  background: #3a3a3a;
-  border-color: #8b5cf6;
-}
-.btn-theme img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: none;
-}
-
-.liste-contacts {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-.item-contact {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.info-contact {
-  max-width: calc(100% - 46px);
-  width: calc(100% - 46px);
-}
-.titre-contact {
-  color: rgba(204, 204, 204, 0.7);
-  font-size: 11px;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-.info-contact :is(.lien-contact, time, address) {
-  color: #fff;
-  font-size: 13px;
-}
-.info-contact address {
-  font-style: normal;
-}
-
-.lien-whatsapp {
-  color: #25d366;
-}
-.lien-whatsapp:hover {
-  color: #128c7e;
-  text-decoration: underline;
-}
-
-.liste-reseaux {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  padding: 4px 0 4px 7px;
-}
-.lien-reseau {
-  display: block;
-}
-.lien-reseau img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: none;
-}
-
-.navigation {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(26, 26, 26, 0.95);
-  border: 1px solid #2a2a2a;
-  border-radius: 12px 12px 0 0;
-  z-index: 5;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.liste-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 10px;
-}
-.lien-nav {
-  color: #ccc;
-  font-size: 11px;
-  padding: 20px 7px;
-  position: relative;
-}
-.lien-nav:hover {
-  color: rgba(204, 204, 204, 0.7);
-}
-.lien-nav.actif {
-  color: #8b5cf6;
-}
-.lien-nav.actif::after {
-  content: "";
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
-  background: #8b5cf6;
-  border-radius: 2px;
-}
-
-.texte-a-propos {
-  color: #ccc;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.6;
-  margin-bottom: 40px;
-}
-.texte-a-propos p {
-  margin-bottom: 15px;
-}
-
-.services {
-  margin-bottom: 35px;
-}
-.titre-service {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.liste-services {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-.item-service {
-  background: #222;
-  padding: 20px;
-  border-radius: 14px;
-}
-.boite-icone-service {
-  margin-bottom: 10px;
-}
-.boite-icone-service img {
-  margin: auto;
-  filter: none;
-}
-.contenu-service {
-  text-align: center;
-}
-.titre-item-service {
-  color: #fff;
-  font-size: 16px;
-  margin-bottom: 7px;
-}
-.texte-service {
-  color: #ccc;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.ligne-temps {
-  margin-bottom: 30px;
-}
-.en-tete-section {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-.titre-section {
-  color: #fff;
-  font-size: 18px;
-}
-.en-tete-section .boite-icone img {
-  width: 20px;
-  height: 20px;
-  filter: none;
-}
-.item-ligne-temps:first-child::before {
-  top: -25px;
-  left: -30px;
-  width: 1px;
-  height: calc(100% + 50px);
-  background: #2a2a2a;
-}
-
-body.theme-clair .item-ligne-temps:first-child::before {
-  background: #d0d8e8;
-}
-.liste-ligne-temps {
-  font-size: 14px;
-  margin-left: 45px;
-}
-.item-ligne-temps {
-  position: relative;
-}
-.item-ligne-temps:not(:last-child) {
-  margin-bottom: 20px;
-}
-.titre-item-ligne {
-  color: #fff;
-  font-size: 14px;
-  line-height: 1.3;
-  margin-bottom: 7px;
-}
-.item-ligne-temps span {
-  color: #a78bfa;
-  font-weight: 400;
-  line-height: 1.6;
-  display: block;
-}
-.item-ligne-temps:not(:last-child)::before {
-  content: "";
-  position: absolute;
-  top: -25px;
-  left: -30px;
-  width: 1px;
-  height: calc(100% + 50px);
-  background: #2a2a2a;
-}
-.item-ligne-temps::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-  background: #8b5cf6;
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px #2a2a2a;
-}
-.texte-ligne {
-  color: #ccc;
-  font-weight: 300;
-  line-height: 1.6;
-}
-
-.competences {
-  margin-bottom: 30px;
-}
-.titre-competences {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.liste-competences {
-  padding: 20px;
-}
-.item-competence:not(:last-child) {
-  margin-bottom: 15px;
-}
-.en-tete-competence {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 8px;
-}
-.nom-competence {
-  color: #fff;
-  font-size: 13px;
-  font-weight: 500;
-}
-.en-tete-competence data {
-  color: #ccc;
-  font-size: 13px;
-  font-weight: 300;
-  display: inline;
-}
-.fond-barre {
-  background: #2a2a2a;
-  width: 100%;
-  height: 8px;
-  border-radius: 10px;
-  overflow: hidden;
-}
-.barre-competence {
-  background: #8b5cf6;
-  height: 100%;
-  border-radius: inherit;
-}
-
-.liste-filtres {
-  display: none;
-}
-
-.boite-select-filtre {
-  position: relative;
-  margin-bottom: 25px;
-}
-.select-filtre {
-  background: #1a1a1a;
-  color: #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 12px 16px;
-  border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  font-size: 14px;
-  font-weight: 300;
-}
-.select-filtre.actif .icone-select {
-  transform: rotate(0.5turn);
-}
-.icone-select img {
-  display: block;
-  width: 16px;
-  height: 16px;
-  filter: none;
-}
-
-.liste-select {
-  background: #1a1a1a;
-  position: absolute;
-  top: calc(100% + 6px);
-  width: 100%;
-  padding: 6px;
-  border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.select-filtre.actif + .liste-select {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: all;
-}
-.item-select button {
-  background: #1a1a1a;
-  color: #ccc;
-  font-size: 14px;
-  font-weight: 300;
-  text-transform: capitalize;
-  width: 100%;
-  padding: 8px 10px;
-  border-radius: 8px;
-  text-align: left;
-}
-.item-select button:hover {
-  background: #2a2a2a;
-}
-
-.liste-projets {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 10px;
-}
-.item-projet {
-  display: none;
-}
-.item-projet.actif {
-  display: block;
-}
-.item-projet > a {
-  width: 100%;
-}
-
-.image-projet {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border-radius: 16px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-.image-projet::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1;
-}
-.icone-oeil {
-  --scale: 0.8;
-  background: #2a2a2a;
-  color: #8b5cf6;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.icone-oeil img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: none;
-}
-.image-projet img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.titre-projet {
-  color: #fff;
-  font-size: 15px;
-  font-weight: 400;
-  text-transform: capitalize;
-  line-height: 1.3;
-  margin-left: 10px;
-}
-.categorie-projet {
-  color: rgba(204, 204, 204, 0.7);
-  font-size: 14px;
-  font-weight: 300;
-  margin-left: 10px;
-}
-
-.info-contact-simple {
-  background: #1a1a1a;
-  border: 1px solid #2a2a2a;
-  border-radius: 16px;
-  margin-bottom: 30px;
-  padding: 10px 0;
-}
-.info-contact-simple p {
-  text-align: center;
-  padding: 10px;
-  color: #ccc;
-  font-size: 16px;
-  line-height: 2;
-}
-.info-contact-simple strong {
-  color: #8b5cf6;
-}
-
-.titre-formulaire {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.groupe-champs {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
-  margin-bottom: 25px;
-}
-.champ-formulaire {
-  color: #fff;
-  font-size: 14px;
-  font-weight: 400;
-  padding: 13px 20px;
-  border: 1px solid #2a2a2a;
-  border-radius: 14px;
-  outline: none;
-}
-.champ-formulaire::placeholder {
-  font-weight: 500;
-  color: rgba(204, 204, 204, 0.7);
-}
-.champ-formulaire:focus {
-  border-color: #8b5cf6;
-}
-.champ-formulaire:valid {
-  border-color: #4caf50;
-}
-.champ-formulaire:invalid:not(:placeholder-shown) {
-  border-color: #f44336;
-}
-textarea.champ-formulaire {
-  min-height: 100px;
-  height: 120px;
-  max-height: 200px;
-  resize: vertical;
-  margin-bottom: 25px;
-}
-
-.btn-formulaire {
-  position: relative;
-  width: 100%;
-  background: #2a2a2a;
-  color: #8b5cf6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 20px;
-  border-radius: 14px;
-  font-size: 14px;
-  text-transform: capitalize;
-  z-index: 1;
-}
-.btn-formulaire img {
-  display: block;
-  width: 18px;
-  height: 18px;
-  filter: none;
-}
-.btn-formulaire:hover:not(:disabled) {
-  background: #3a3a3a;
-}
-.btn-formulaire:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-/* ===== MEDIA QUERIES ===== */
-
-@media (min-width: 450px) {
-  .image-projet {
-    height: auto;
-  }
-}
-
-@media (min-width: 580px) {
-  .barre-laterale,
-  .page {
-    padding: 30px;
-  }
-  .titre-article {
-    padding-bottom: 15px;
-    font-size: 32px;
-  }
-  .boite-icone {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    font-size: 18px;
-  }
-  .boite-icone img {
-    width: 24px;
-    height: 24px;
-  }
-
-  main {
-    padding: 30px;
-  }
-
-  .barre-laterale {
-    max-height: 180px;
-    margin-bottom: 30px;
-  }
-  .barre-laterale.actif {
-    max-height: 584px;
-  }
-  .info-principale {
-    gap: 25px;
-  }
-  .cadre-avatar {
-    border-radius: 30px;
-  }
-  .cadre-avatar img {
-    width: 120px;
-    height: 120px;
-  }
-  .nom {
-    font-size: 26px;
-    margin-bottom: 15px;
-  }
-  .titre {
-    padding: 5px 18px;
-    font-size: 12px;
-  }
-  .btn-plus-info {
-    top: -30px;
-    right: -30px;
-    padding: 10px 15px;
-  }
-  .btn-plus-info span {
-    display: block;
-    font-size: 12px;
-  }
-  .btn-plus-info img {
-    display: none;
-  }
-  .separateur {
-    margin: 32px 0;
-  }
-  .liste-contacts {
-    gap: 20px;
-  }
-  .info-contact {
-    max-width: calc(100% - 64px);
-    width: calc(100% - 64px);
-  }
-  .info-contact :is(.lien-contact, time, address) {
-    font-size: 13px;
-  }
-
-  .navigation {
-    border-radius: 20px 20px 0 0;
-  }
-  .liste-navigation {
-    gap: 20px;
-  }
-  .lien-nav {
-    font-size: 14px;
-  }
-
-  .item-service {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 18px;
-    padding: 30px;
-  }
-  .boite-icone-service {
-    margin-bottom: 0;
-    margin-top: 5px;
-  }
-  .contenu-service {
-    text-align: left;
-  }
-
-  .liste-ligne-temps {
-    margin-left: 65px;
-  }
-  .item-ligne-temps:not(:last-child)::before {
-    left: -40px;
-  }
-  .item-ligne-temps::after {
-    height: 8px;
-    width: 8px;
-    left: -43px;
-  }
-  .item-competence:not(:last-child) {
-    margin-bottom: 25px;
-  }
-
-  .image-projet {
-    border-radius: 16px;
-  }
-
-  .groupe-champs {
-    gap: 30px;
-    margin-bottom: 30px;
-  }
-  .champ-formulaire {
-    padding: 15px 20px;
-  }
-  textarea.champ-formulaire {
-    margin-bottom: 30px;
-  }
-  .btn-formulaire {
-    font-size: 16px;
-    padding: 16px 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .liste-contacts {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px 15px;
-  }
-
-  .lien-nav {
-    font-size: 15px;
-  }
-
-  .titre-article {
-    padding-bottom: 20px;
-  }
-  .boite-select-filtre {
-    display: none;
-  }
-  .liste-filtres {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
-    padding-left: 5px;
-    margin-bottom: 30px;
-  }
-  .item-filtre button {
-    color: #ccc;
-    font-size: 15px;
-    position: relative;
-  }
-  .item-filtre button:hover {
-    color: rgba(204, 204, 204, 0.7);
-  }
-  .item-filtre button.actif {
-    color: #8b5cf6;
-  }
-  .item-filtre button.actif::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #8b5cf6;
-    border-radius: 2px;
-  }
-
-  .liste-projets {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .groupe-champs {
-    grid-template-columns: 1fr 1fr;
-  }
-  .btn-formulaire {
-    width: max-content;
-    margin-left: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  main {
-    padding: 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 25px;
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .contenu-principal {
-    flex: 1;
-    min-width: 0;
-    position: relative;
-  }
-
-  .barre-laterale {
-    position: sticky;
-    top: 20px;
-    max-height: calc(100vh - 40px);
-    height: fit-content;
-    margin-bottom: 0;
-    padding: 25px;
-    z-index: 1;
-    width: 320px;
-    flex-shrink: 0;
-    overflow-y: auto;
-  }
-  .barre-laterale.actif {
-    max-height: 584px;
-  }
-
-  .info-principale {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .cadre-avatar img {
-    width: 130px;
-    height: 130px;
-  }
-  .nom {
-    font-size: 24px;
-    white-space: nowrap;
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  .titre {
-    font-size: 13px;
-    margin: auto;
-  }
-  .btn-plus-info {
-    display: none;
-  }
-  .info-sup {
-    opacity: 1;
-    visibility: visible;
-  }
-  .liste-contacts {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  .info-contact :is(.lien-contact) {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .info-contact :is(.lien-contact, time, address) {
-    font-size: 14px;
-    font-weight: 300;
-  }
-  .titre-contact {
-    font-size: 11px;
-  }
-  .boite-icone {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-  }
-  .boite-icone img {
-    width: 20px;
-    height: 20px;
-    filter: none;
-  }
-  .separateur {
-    margin: 16px 0;
-  }
-  .separateur:last-of-type {
-    margin: 16px 0;
-    opacity: 0;
-  }
-  .liste-reseaux {
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-  }
-  .lien-reseau img {
-    width: 22px;
-    height: 22px;
-    filter: none;
-  }
-
-  .navigation {
-    position: absolute;
-    bottom: auto;
-    top: 0;
-    left: auto;
-    right: 0;
-    width: max-content;
-    border-radius: 0 20px;
-    padding: 0 20px;
-    background: rgba(26, 26, 26, 0.95);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-  }
-  .liste-navigation {
-    gap: 30px;
-    padding: 0 20px;
-  }
-  .lien-nav {
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-  .liste-services {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 25px;
-  }
-
-  .liste-projets {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .page {
-    padding: 30px;
-    padding-top: 60px;
-  }
-}
-
-@media (min-width: 1250px) {
-  body::-webkit-scrollbar {
-    width: 20px;
-  }
-  body::-webkit-scrollbar-track {
-    background: #0d0d0d;
-  }
-  body::-webkit-scrollbar-thumb {
-    border: 5px solid #0d0d0d;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-  }
-  body::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.15);
-  }
-  body::-webkit-scrollbar-button {
-    height: 60px;
-  }
-
-  main {
-    max-width: 100%;
-    padding: 20px 30px;
-    gap: 30px;
-    margin: 0;
-  }
-
-  .barre-laterale {
-    width: 340px;
-    padding: 30px 25px;
-  }
-
-  .contenu-principal {
-    flex: 1;
-    min-width: 0;
-    max-width: 100%;
-  }
-
-  .page {
-    min-height: 100%;
-  }
-
-  .texte-ligne {
-    max-width: 700px;
-  }
-}
-
-/* Theme clair */
-body.theme-clair {
-  background: #ffffff;
-  color: #1a1a2e;
-}
-
-body.theme-clair .barre-laterale,
-body.theme-clair .page {
-  background: #f0f2f5;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .separateur {
-  background: #d0d8e8;
-}
-
-body.theme-clair .boite-icone {
-  background: #e8edf8;
-  color: #4f46e5;
-}
-
-body.theme-clair .titre-article {
-  color: #1a1a2e;
-  border-color: #4f46e5;
-}
-
-body.theme-clair .carte-contenu {
-  background: #e8edf8;
-}
-
-body.theme-clair .nom {
-  color: #1a1a2e;
-}
-
-body.theme-clair .titre {
-  color: #1a1a2e;
-  background: #e8edf8;
-}
-
-body.theme-clair .btn-plus-info {
-  background: #e8edf8;
-  color: #4f46e5;
-}
-
-body.theme-clair .info-contact :is(.lien-contact, time, address) {
-  color: #1a1a2e;
-}
-
-body.theme-clair .titre-contact {
-  color: rgba(26, 26, 46, 0.6);
-}
-
-body.theme-clair .navigation {
-  background: rgba(240, 242, 245, 0.95);
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .lien-nav {
-  color: #4a4a6a;
-}
-
-body.theme-clair .lien-nav:hover {
-  color: #7a7a9a;
-}
-
-body.theme-clair .lien-nav.actif {
-  color: #4f46e5;
-}
-
-body.theme-clair .texte-a-propos {
-  color: #2a2a4a;
-}
-
-body.theme-clair .titre-service {
-  color: #1a1a2e;
-}
-
-body.theme-clair .titre-item-service {
-  color: #1a1a2e;
-}
-
-body.theme-clair .texte-service {
-  color: #2a2a4a;
-}
-
-body.theme-clair .item-service {
-  background: #e8edf8;
-}
-
-body.theme-clair .titre-section {
-  color: #1a1a2e;
-}
-
-body.theme-clair .titre-item-ligne {
-  color: #1a1a2e;
-}
-
-body.theme-clair .item-ligne-temps span {
-  color: #4f46e5;
-}
-
-body.theme-clair .item-ligne-temps:not(:last-child)::before {
-  background: #d0d8e8;
-}
-
-body.theme-clair .texte-ligne {
-  color: #2a2a4a;
-}
-
-body.theme-clair .titre-competences {
-  color: #1a1a2e;
-}
-
-body.theme-clair .nom-competence {
-  color: #1a1a2e;
-}
-
-body.theme-clair .en-tete-competence data {
-  color: #2a2a4a;
-}
-
-body.theme-clair .fond-barre {
-  background: #d0d8e8;
-}
-
-body.theme-clair .barre-competence {
-  background: #4f46e5;
-}
-
-body.theme-clair .select-filtre {
-  background: #ffffff;
-  color: #1a1a2e;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .liste-select {
-  background: #ffffff;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .item-select button {
-  background: #ffffff;
-  color: #1a1a2e;
-}
-
-body.theme-clair .item-select button:hover {
-  background: #e8edf8;
-}
-
-body.theme-clair .titre-projet {
-  color: #1a1a2e;
-}
-
-body.theme-clair .categorie-projet {
-  color: rgba(26, 26, 46, 0.6);
-}
-
-body.theme-clair .info-contact-simple {
-  background: #f0f2f5;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .info-contact-simple p {
-  color: #2a2a4a;
-}
-
-body.theme-clair .info-contact-simple strong {
-  color: #4f46e5;
-}
-
-body.theme-clair .titre-formulaire {
-  color: #1a1a2e;
-}
-
-body.theme-clair .champ-formulaire {
-  color: #1a1a2e;
-  border-color: #d0d8e8;
-  background: #ffffff;
-}
-
-body.theme-clair .champ-formulaire::placeholder {
-  color: rgba(26, 26, 46, 0.5);
-}
-
-body.theme-clair .btn-formulaire {
-  background: #e8edf8;
-  color: #4f46e5;
-}
-
-body.theme-clair .btn-theme {
-  background: #e8edf8;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .btn-theme:hover {
-  background: #d0d8e8;
-  border-color: #4f46e5;
-}
-
-body.theme-clair .icone-oeil {
-  background: #d0d8e8;
-  color: #4f46e5;
-}
-
-body.theme-clair .item-filtre button {
-  color: #4a4a6a;
-}
-
-body.theme-clair .item-filtre button.actif {
-  color: #4f46e5;
-}
-
-body.theme-clair .item-filtre button:hover {
-  color: #7a7a9a;
-}
-
-body.theme-clair .theme-toggle-wrapper .btn-theme {
-  background: #e8edf8;
-  border-color: #d0d8e8;
-}
-
-body.theme-clair .theme-toggle-wrapper .btn-theme:hover {
-  background: #d0d8e8;
-  border-color: #4f46e5;
-}
-
-body.theme-clair .item-ligne-temps::after {
-  background: #4f46e5;
-}
-
-body.theme-clair .btn-plus-info:hover {
-  background: #d0d8e8;
-}
-
-body.theme-clair .boite-icone img {
-  filter: none;
-}
-
-body.theme-clair .btn-formulaire:hover:not(:disabled) {
-  background: #d0d8e8;
-}
-
-body.theme-clair .icone-oeil img {
-  filter: none;
-}
-
-/* Lightbox */
-.lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.92);
-  z-index: 9999;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
-  cursor: pointer;
-}
-
-.lightbox-overlay.actif {
-  display: flex;
-}
-
-.lightbox-contenu {
-  max-width: 90%;
-  max-height: 90%;
-  text-align: center;
-  position: relative;
-  cursor: default;
-}
-
-.lightbox-contenu img {
-  max-width: 100%;
-  max-height: 82vh;
-  border-radius: 12px;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
-  display: block;
-  margin: 0 auto;
-}
-
-.lightbox-contenu .titre-lightbox {
-  color: #fff;
-  font-size: 20px;
-  margin-top: 16px;
-  font-weight: 500;
-}
-
-.btn-fermer-lightbox {
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  color: #fff;
-  font-size: 40px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 10px;
-  line-height: 1;
-}
-.btn-fermer-lightbox:hover {
-  color: #8b5cf6;
-  transform: rotate(90deg);
-}
-
-body.theme-clair .lightbox-overlay {
-  background: rgba(255, 255, 255, 0.95);
-}
-
-body.theme-clair .lightbox-contenu .titre-lightbox {
-  color: #1a1a2e;
-}
-
-body.theme-clair .btn-fermer-lightbox {
-  color: #1a1a2e;
-}
-
-body.theme-clair .btn-fermer-lightbox:hover {
-  color: #4f46e5;
-}
-
-@media (max-width: 768px) {
-  .lightbox-overlay {
-    padding: 20px;
-  }
-  .btn-fermer-lightbox {
-    top: 10px;
-    right: 10px;
-    font-size: 32px;
-  }
-  .lightbox-contenu .titre-lightbox {
-    font-size: 16px;
-    margin-top: 12px;
-  }
-  .lightbox-contenu img {
-    max-height: 70vh;
-  }
-}
-
-@media (max-width: 480px) {
-  .lightbox-overlay {
-    padding: 10px;
-  }
-  .btn-fermer-lightbox {
-    top: 5px;
-    right: 5px;
-    font-size: 28px;
-  }
-  .lightbox-contenu .titre-lightbox {
-    font-size: 14px;
-  }
-  .lightbox-contenu img {
-    max-height: 65vh;
-  }
-}
-
-/* ===== SUPPRESSION DE TOUTES LES ANIMATIONS ===== */
-
-.item-service {
-  transition: none !important;
-}
-.item-service:hover {
-  transform: none !important;
-}
-
-.barre-competence {
-  transition: none !important;
-}
-
-.image-projet img {
-  transition: none !important;
-}
-.item-projet > a:hover img {
-  transform: none !important;
-}
-.image-projet::before {
-  transition: none !important;
-}
-.icone-oeil {
-  transition: none !important;
-}
-.item-projet > a:hover .icone-oeil {
-  --scale: 0.8;
-  opacity: 0;
-}
-.item-projet > a:hover .image-projet::before {
-  background: transparent;
-}
-
-.lien-reseau {
-  transition: none !important;
-}
-.lien-reseau:hover {
-  transform: none !important;
-}
-
-.btn-fermer-lightbox {
-  transition: none !important;
-}
-.btn-fermer-lightbox:hover {
-  transform: none !important;
-}
-
-.lien-nav {
-  transition: none !important;
-}
-.lien-nav.actif::after {
-  transition: none !important;
-}
-
-.item-filtre button {
-  transition: none !important;
-}
-.item-filtre button.actif::after {
-  transition: none !important;
-}
-
-.select-filtre {
-  transition: none !important;
-}
-.select-filtre.actif .icone-select {
-  transition: none !important;
-}
-.liste-select {
-  transition: none !important;
-}
-.item-select button {
-  transition: none !important;
-}
-
-.champ-formulaire {
-  transition: none !important;
-}
-.btn-formulaire {
-  transition: none !important;
-}
-
-.page {
-  animation: none !important;
-}
-
-/* ===== CORRECTION POUR macOS - Navigation ne se superpose plus ===== */
-
-/* Ajouter un padding en bas du contenu principal pour que la navigation ne cache rien */
-.contenu-principal {
-  padding-bottom: 85px;
-}
-
-/* Sur desktop (>=1024px), la navigation est en absolute donc pas besoin de padding */
-@media (min-width: 1024px) {
-  .contenu-principal {
-    padding-bottom: 0;
-  }
-}
-
-/* Pour les pages individuelles, ajouter un padding-top pour éviter que le titre soit caché */
-.page {
-  padding-top: 15px;
-}
-
-@media (min-width: 580px) {
-  .page {
-    padding-top: 30px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .page {
-    padding-top: 60px;
-  }
-}
-
-/* Version tablette (768px - 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .contenu-principal {
-    padding-bottom: 75px;
-  }
-  .page {
-    padding-top: 20px;
-  }
-}
-
-/* Version mobile (<768px) */
-@media (max-width: 767px) {
-  .contenu-principal {
-    padding-bottom: 80px;
-  }
-  .page {
-    padding-top: 10px;
-  }
-}
-
-.info-contact {
-  max-width: calc(100% - 46px);
-  width: calc(100% - 46px);
-  word-break: break-word;
-}
-
-.lien-contact {
-  word-break: break-word;
-}
-
-.info-contact :is(.lien-contact, time, address) {
-  color: #fff;
-  font-size: 13px;
-  word-break: break-word;
-}
-/* ===== RESEAUX SOCIAUX (images sans liens) ===== */
-.liste-reseaux {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 8px 0 4px 0;
-  flex-wrap: wrap;
-}
-
-.item-reseau {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-}
-
-.item-reseau img {
-  display: block;
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  filter: none;
-}
-
-/* Correction pour Android - éviter que les images soient coupées */
-@media (max-width: 768px) {
-  .liste-reseaux {
-    gap: 15px;
-    padding: 6px 0;
-  }
-
-  .item-reseau img {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .liste-reseaux {
-    gap: 12px;
-    padding: 4px 0;
-  }
-
-  .item-reseau img {
-    width: 22px;
-    height: 22px;
-  }
-}
---- FICHIER : C:\xampp\htdocs\Johanes\johanes.js ---
-"use strict";
-
-// ===== FONCTION UTILITAIRE =====
-const basculerClasse = function (e) {
-  e.classList.toggle("actif");
-};
-
-// ===== BARRE LATÉRALE =====
-const barreLaterale = document.querySelector("[data-barre]");
-const boutonInfo = document.querySelector("[data-btn-info]");
-if (boutonInfo) {
-  boutonInfo.addEventListener("click", function () {
-    basculerClasse(barreLaterale);
-  });
-}
-
-// ===== FILTRES PROJETS =====
-const selectFiltre = document.querySelector("[data-select]");
-const itemsSelect = document.querySelectorAll("[data-select-item]");
-const valeurSelect = document.querySelector("[data-select-valeur]");
-const boutonsFiltre = document.querySelectorAll("[data-btn-filtre]");
-const itemsProjets = document.querySelectorAll("[data-filtre-item]");
-
-if (selectFiltre) {
-  selectFiltre.addEventListener("click", function () {
-    basculerClasse(this);
-    const expanded =
-      this.getAttribute("aria-expanded") === "true" ? "false" : "true";
-    this.setAttribute("aria-expanded", expanded);
-  });
-}
-
-itemsSelect.forEach(function (item) {
-  item.addEventListener("click", function () {
-    const valeur = this.textContent.toLowerCase();
-    valeurSelect.textContent = this.textContent;
-    basculerClasse(selectFiltre);
-    if (selectFiltre) {
-      selectFiltre.setAttribute("aria-expanded", "false");
-    }
-    filtrerProjets(valeur);
-  });
-});
-
-const filtrerProjets = function (categorie) {
-  itemsProjets.forEach(function (projet) {
-    if (categorie === "tous" || categorie === projet.dataset.categorie) {
-      projet.classList.add("actif");
-    } else {
-      projet.classList.remove("actif");
-    }
-  });
-};
-
-let dernierBoutonClique = boutonsFiltre[0];
-boutonsFiltre.forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    const valeur = this.textContent.toLowerCase();
-    valeurSelect.textContent = this.textContent;
-    filtrerProjets(valeur);
-    dernierBoutonClique.classList.remove("actif");
-    dernierBoutonClique.removeAttribute("aria-selected");
-    this.classList.add("actif");
-    this.setAttribute("aria-selected", "true");
-    dernierBoutonClique = this;
-  });
-});
-
-// ===== WHATSAPP : OUVERTURE INTELLIGENTE =====
-function ouvrirWhatsApp(numero, texte) {
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const message = texte ? `?text=${encodeURIComponent(texte)}` : "";
-
-  // Vérifier si WhatsApp est installé sur Android
-  if (isMobile && /Android/i.test(navigator.userAgent)) {
-    // Tentative d'ouverture avec intent
-    const intent = `intent://send/${numero}${message ? "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F${numero}${message};end" : "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;end"}`;
-
-    // Ouvrir avec intent
-    const win = window.open(intent, "_system");
-
-    // Fallback si l'appli n'est pas installée
-    setTimeout(function () {
-      if (!win || win.closed || typeof win.closed === "undefined") {
-        window.location.href = `https://wa.me/${numero}${message}`;
-      }
-    }, 800);
-  } else if (isMobile && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    // iOS : utiliser l'URL directe (ouvre l'appli)
-    window.location.href = `https://wa.me/${numero}${message}`;
-  } else {
-    // Ordinateur : WhatsApp Web dans un nouvel onglet
-    window.open(`https://wa.me/${numero}${message}`, "_blank");
-  }
-}
-
-// ===== FORMULAIRE DE CONTACT =====
-const formulaire = document.querySelector("[data-formulaire]");
-const champsFormulaire = document.querySelectorAll("[data-champ]");
-const boutonEnvoi = document.querySelector("[data-btn-formulaire]");
-
-champsFormulaire.forEach(function (champ) {
-  champ.addEventListener("input", function () {
-    if (formulaire && formulaire.checkValidity()) {
-      boutonEnvoi.removeAttribute("disabled");
-    } else if (boutonEnvoi) {
-      boutonEnvoi.setAttribute("disabled", "");
-    }
-  });
-});
-
-if (formulaire) {
-  formulaire.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const nom =
-      this.querySelector('input[name="nom"]').value.trim() || "Visiteur";
-    const message = this.querySelector('textarea[name="message"]').value.trim();
-
-    if (message) {
-      const numero = "261387587959";
-      const texte = `Bonjour, je suis ${nom}.%0A%0A${message}`;
-      ouvrirWhatsApp(numero, texte);
-      this.reset();
-      boutonEnvoi.setAttribute("disabled", "");
-    }
-  });
-}
-
-// ===== NAVIGATION PAGES =====
-const liensNavigation = document.querySelectorAll("[data-page-nav]");
-const pages = document.querySelectorAll("[data-page]");
-
-liensNavigation.forEach(function (lien) {
-  lien.addEventListener("click", function () {
-    const nomPage = this.textContent.toLowerCase().trim();
-
-    pages.forEach(function (page) {
-      const nomPageActuelle = page.dataset.page.toLowerCase().trim();
-      if (nomPage === nomPageActuelle) {
-        page.classList.add("actif");
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      } else {
-        page.classList.remove("actif");
-      }
-    });
-
-    liensNavigation.forEach(function (nav) {
-      nav.classList.remove("actif");
-      nav.removeAttribute("aria-current");
-    });
-    this.classList.add("actif");
-    this.setAttribute("aria-current", "page");
-
-    if (window.innerWidth < 1024 && barreLaterale) {
-      barreLaterale.classList.remove("actif");
-    }
-  });
-});
-
-// ===== BOUTON THÈME =====
-let themeSombre = true;
-
-function basculerTheme() {
-  const body = document.body;
-  const themeIcon = document.getElementById("theme-icon");
-
-  if (themeSombre) {
-    body.classList.add("theme-clair");
-    if (themeIcon) {
-      themeIcon.src = "./images/icone-lune.png";
-      themeIcon.alt = "Thème sombre";
-    }
-    themeSombre = false;
-  } else {
-    body.classList.remove("theme-clair");
-    if (themeIcon) {
-      themeIcon.src = "./images/icone-soleil.png";
-      themeIcon.alt = "Thème clair";
-    }
-    themeSombre = true;
-  }
-
-  try {
-    localStorage.setItem("theme", themeSombre ? "sombre" : "clair");
-  } catch (error) {
-    console.warn("LocalStorage non disponible");
-  }
-}
-
-// Charger le thème sauvegardé
-try {
-  const themeSauvegarde = localStorage.getItem("theme");
-  if (themeSauvegarde === "clair") {
-    basculerTheme();
-  }
-} catch (error) {
-  console.warn("LocalStorage non disponible");
-}
-
-// ===== LIGHTBOX =====
-function ouvrirLightbox(src, titre) {
-  const overlay = document.querySelector(".lightbox-overlay");
-  const image = document.getElementById("lightbox-image");
-  const titreEl = document.getElementById("lightbox-titre");
-
-  if (!overlay || !image) return;
-
-  image.src = src;
-  image.alt = titre || "Agrandissement";
-  if (titreEl) titreEl.textContent = titre || "";
-
-  overlay.classList.add("actif");
-  document.body.style.overflow = "hidden";
-
-  setTimeout(function () {
-    overlay.focus();
-  }, 100);
-}
-
-function fermerLightbox() {
-  const overlay = document.querySelector(".lightbox-overlay");
-  if (!overlay) return;
-  overlay.classList.remove("actif");
-  document.body.style.overflow = "";
-}
-
-// Fermer avec la touche Échap
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    fermerLightbox();
-  }
-});
-
-// Fermer avec clic sur l'overlay
-const overlay = document.querySelector(".lightbox-overlay");
-if (overlay) {
-  overlay.addEventListener("click", function (e) {
-    if (e.target === this) {
-      fermerLightbox();
-    }
-  });
-}
-
-// ===== GESTION DES LIENS WHATSAPP =====
-// Remplacer les liens WhatsApp par la fonction intelligente
-document.querySelectorAll(".lien-whatsapp").forEach(function (lien) {
-  // Si le lien a un data-numero, on garde l'événement onclick déjà présent
-  // Sinon, on ajoute un comportement par défaut
-  if (!lien.hasAttribute("data-numero")) {
-    const href = lien.getAttribute("href") || "";
-    const match = href.match(/(\d{10,15})/);
-    if (match) {
-      lien.setAttribute("data-numero", match[1]);
-      lien.setAttribute("href", "#");
-      lien.addEventListener("click", function (e) {
-        e.preventDefault();
-        const numero = this.getAttribute("data-numero");
-        if (numero) {
-          ouvrirWhatsApp(numero);
-        }
-      });
-    }
-  }
-});
---- FICHIER : C:\xampp\htdocs\Johanes\README.md ---
-# Portfolio - Johanès Falitiana
-
-👨‍💻 Développeur passionné basé à Fianarantsoa, Madagascar
-
-![Portfolio Preview](images/j.png)
-
-## 🚀 À propos
-
-Je suis Johanès Falitiana, un développeur polyvalent spécialisé dans le développement desktop, mobile et web. Ce portfolio présente mes compétences, mes projets et mon parcours.
-
-## ✨ Fonctionnalités
-
-- 📱 **Design responsive** - Adapté à tous les écrans (mobile, tablette, desktop)
-- 🌓 **Thème clair/sombre** - Avec sauvegarde automatique dans le navigateur
-- 🔍 **Filtrage de projets** - Filtrez mes projets par catégorie (Web, Applications, Outils)
-- 🖼️ **Lightbox** - Visualisation agrandie des captures d'écran
-- 📧 **Formulaire de contact** - Envoi direct vers WhatsApp
-- 🎨 **UI moderne** - Design épuré et professionnel
-
-## 🛠️ Technologies utilisées
-
-- **HTML5** - Structure sémantique
-- **CSS3** - Design responsive, Flexbox, Grid
-- **JavaScript** - Fonctionnalités interactives
-- **Google Fonts** - Polices Poppins
-
-## 📂 Structure du projet
-
-Johanes/
-
-├── index.html # Page principale
-
-├── johanes.css # Styles
-
-├── johanes.js # Fonctionnalités JavaScript
-
-├── fonts/ # Polices Poppins
-
-└── images/ # Images et icônes
-
-## 📊 Compétences
-
-| Catégorie       | Compétences                                             |
-| --------------- | ------------------------------------------------------- |
-| **Langages**    | Python, HTML5, CSS3, JavaScript, PHP, Kotlin, C++, C#   |
-| **Frameworks**  | React, Qt6, .NET 8.0                                    |
-| **Design**      | UI/UX Design, Figma, Montage vidéo, Production musicale |
-| **Langues**     | Malagasy (100%), Français (95%), Anglais (85%)          |
-| **Bureautique** | Microsoft Office (Word, Excel, PowerPoint, Access)      |
-
-## 📱 Projets mis en avant
-
-| Projet           | Description           | Technologies            |
-| ---------------- | --------------------- | ----------------------- |
-| **RAMP**         | Application web       | HTML5, CSS3, JavaScript |
-| **JojohExpress** | Site web dynamique    | HTML5, CSS3, JS, PHP    |
-| **Schoolar**     | Application éducative | React, PHP, Chart.js    |
-| **CopyBoost**    | Outil de copie        | C#, .NET 8.0, Robocopy  |
-| **JBacc**        | Application mobile    | Kotlin, Android         |
-
-## 📧 Contact
-
-- **Email** : [falitianajohanes@gmail.com](mailto:falitianajohanes@gmail.com)
-- **WhatsApp** : [+261 38 75 879 59](https://wa.me/261387587959)
-
-```
-📄 Licence
-
-Ce projet est open source et disponible sous licence MIT.
-
-
-🙏 Remerciements
-
-    Poppins Font - Google Fonts
-
-    Tous les contributeurs et visiteurs
-
-© 2026 Johanès Falitiana
-text
-
-
----
-```
---- FICHIER : C:\xampp\htdocs\Johanes\fonts\poppins-regular-webfont.woff2 ---
-wOF2     @�     �0  @u                       ?FFTMn@�` �b<	�e
-��H��;6$��R  ��Q�?webf�%̳��w��542l@x"����%p2Ă_�����$��0:#���W�Fr�E�l�A^�I]jU�k9�2�/6�`��c[Va13���G0�ַ�NI�Kr$�L=H�K���?��� wԚ����nի��3k��M�������)����=<���/���թة��y�.8��DN���sK���;�qK��(���az5�O�?���&:!�ˏv���m���N����r&�y���]�es�
-��&��+���q��!�:�q�3�8�n��и�vBMԤ�� p'�4$yA
-�H��c(U�m���'�K�d�����D+-*��3����ʻd��~K�:��mw$V@pQԟ0Z@�Ř͐Y;aE�`��V�x�v,��u#7ۭW��F��Mx�f-+#GP �eV����YcW�#P�Y]{�8t����L 8�2���j ��ܓr�6<��+a���;�����&��A7ő�
- ��0�3��F�,�6��'�&�ٽ!WQ��º�^H�*a�B曦P�����
-5#dN�"��s����!�U7�Q�W�6rX�4S�Y�a[y9�_U� ��|� o���. ��R��+F ��@��M,$����JI��p) �?.MH��ed��e/@^zH���K���t�WS���̏ j/�rI����5�Ժ,�6 ����m�"��y��T��,6:��H�� �[)��q
-n�Ҩ�L�(3ytH�D�"A��Wy�@�>91����f�N��a�A�̨�����u�O��H��ϸ,Ȇ���ln�������C��0��s�=�y�I��L�wD�?!��I�T\�}�0d@Dbe�C�4��Nr {���丏���+�	�n�*H�>������η��Y�O�9�{@3��I��� �{��+�X�O���N|j%6�X3�C� v�k7|"=��?*) �Gfqw����~v-6� �cH�����$����w�Y�-�v]�������5�5�5�5�5�5�վU�e�x���������D"�\���(�H��u>ĔKm}��e���\o����������a���������������K+k��-������������������? 0(r44,<���
-g[�[�X��]=��}�C#ã�c�&&� �@$?L���<�����̀
-\s ��n��|>> n�g�vu��[mh�B���ۙ٥e�O�][:�PeUu��n=�_I���{c���)g4k3��(�|MYt�_��Ϋ3�n�q��m^�TZJ܅�h~zb���h]]k��ٵ�'Bl^R.A����Au�ViD��V�I�ˀ��ɥQ��R\���\dnW���7)8�����"�bT�!��2��;'�/7�Ly��uױǮ�����Fe~.����=��B��)A��E�h�?����
-a����ьɲ�(o�Ж�
-�e4�;�O�Ni�]��o@ci�~�ѳQ9�����]��X���K"O
-�<�,_��b6���K���⋝������K�>G���2r[	�=�h���Ni`?9���^.�����cѪ�nϣ2Z17	���z��>gm���uĀ�����V=V�P�M��=�<Ȱ����6_h� *Eo ;}��!�H��-�����sY�i�g&�S��$�r�;  �N ~���x��)`߽ ��~��޼"�_=�ˑ�pY���
-i��:q+H_�j���:;4��E��&hI*��F���ĭ��2T3�����C�"X[|Gp�_�"2��#E�Vҕ>8�zt��sɨ͹b��]�mQ��s)N)/�@@�6F��:ͭ��;�`�AX#P�HG;ڱ�4CjA�3t͚3��A��� t��0Q���- �� ��!�+�<ά&��*5) ��s!�@��7�\�*�Q0F�KFunZ&e&	4��� ���#0*_�f}����S<��!�U!	�hj��d��p)aJ��Һ��Xp��HԥFg*�ns0Ay=��t%faG��vS4�'�(�+�.y�s�j�A�(����gD���sq�b��<��%��[����+�"ުʨ9ڎ��Q�G^�Q{�3��N�` F�>"�պ]��W�T����Z�(W�+L��B��G��ɘ�o�{7gYٰE��-�q���`<�������]�@�{�6
-V�u�|o �2R�g�21���*�gR�[Z�Q\,�&W�q��H�6�<�0�;��f$�؛ڗ�-#�RK�q
-�c�R�/عvծ]XR�Z�訁�fѰK�����y��pc�2�3j�X�5��i��\��y���(P�l��詽6�<�ix�ڤXJ$�I#V��$K��\��F�̗j��*}V�wֿ+�uC�@t�E���^vM�-�i�r)�?6��͛o��A;Z��5�7��^�A��cΓTy}�$�{Z-��,���^(��b��D.��T.WKI���[�3^�p�ܣ��
-w�0F38�E&n�=���v��QP�O�ʳ�ݖ�e\�����yk��!�\.٧(+<I���L#�o��`�
-b{]�VdU�ʲp�H�o���D�Z(%��eQ a��㳎��]����V�F�&�V�����e*���`C�VCM�Q$�-�a�U��������'�rjg²���ԙ���UU�LzK�����!��!WYnQ���Ч�:ݧ�h}��-�h�#�'>�&�к�!��& Q
-'�#��!�.����eۉ&�`�ॊ�ɁU��.�^7�-��@�!?]_��Co3Q�p��,m��ƎC��#-s޳��ocưj�8�'JI��ԁ#bs�(���R I*���n��}���Ɗ|8R���j�
-�kK�{�=H���x���ev�>�璫Xn��p�dE1����#��yy@fk0��~����3�e�w�D�M�3�g�r��n˽9�4& �㱬�lwZ5�Ӄ��b��.�h^z�EsMr�#V�^`���~]zZ��0A߇h�¬�4�6#�e��q�eKU�5��V�\}q��̏�)�R�a�'���s�f���ݞ���,�wtN��yþ��X�H_,�^bX�Cծ�u��N�x%E��s����qM����<!�����R@9�W�23NIt�d�{��(��2	%W�������贃0=S8�>W˸�^s�c�?�"��@B�m�U-�`�z�z�e	�sRy��cZz���y�Nh��q�@���yJ�^I-�;��ϯ����pZ���^=m�<��u-��|�?k���lij؍n�|�f2��2�����&FP���"�uE���f���d\i'5�����N%n�?>0�6�>��r#�e.�m ��O��V-��@e�N�����`	����A���;X�������ᒚe�*�٠<X� ��i���OVl�m��I�0�[�ZVG><���}��G�^k�wVi�Z�q�"��7��SViY��@p7U\���S�D���ĕ@��eD�쵃�5Vq��O�(5Fw
-�E�b�i��_�@^�@^�A�`�ڎWb�;?>_ZD�>zna#��X�����*�/� �I�+N��P~��~��+��xŴ
-�����s�Eo��J�+\<��5�<e*^4(� �9���V��?!~��봵��8J�vU�C%�Y�+�6��
-�/�ړ ~��jCٖ$ ˘�>�,'x_rV��/�[��8�����̶����(��{ǌw�~������g��/�NMQ9K���]�ɴ�+.�g�ݕ����<�/�@��9���W*���v
-X��C��n�m�mfG����������
-��P�L]��:�t���˙s��#�CN
-��s:o�N�9gpf$�Lo0:�p���x�zv�3#��>��т;��.�8')����;3�,
-�[h�#��E�F����58�/���+{�(mcBo���t<u#�Oh�$�W4�M��F>{%�j�io�loE |l�o�9�\{$5S�R|OK��`�,�i����/e��^���.�'^ec@bi�{e�P���,<�,�`:�f�}���:�Tt��+����[�����ʱI�e4����}hYL�x\�x��=�����x��=��.�8�bQA%oG�@��+�K�����W�kBɨC���E���xO�w��a���)𾩅}��";{�=����������gΜ�='�dG���A�z;N��q��s+&��]��O�q��dD�/�tձ�+>c�u�p�k�.`I��=�$Q/T����`n�yK���3kO[@���
-�x1��!"��L mP �����!+ؼ��?���^����m�2�/���:7�G뭕oh�h�(��w� �5����>}/~x� ���w:2�GbP��
-+�;�G$\��j�{{����+Ꜫ�/�${�`�kޕ5ؒx.Y%��=�y����x�۹ |��+H��z˻��_^k�#�2���xl��w��s������N�2���4�0��T6<{���r�P�3D�)�XKUyD~���)��󾴌�H
-�J��˯�q���~�~N��Kn��{J�}g�0�����T��iH�����[��W�ܑl�B?���xM�%���+��t���Y����<?Ybv�a�gl�6#l�5{�}u~������n�<٬�lS=Ѫ�*'$������Ώ�����O_��~��	0�/C+���ʓ������C
-��_Y��$���
-��V�q���k�pr�/ pW�q���m='!Jh������E���䕚<>���|j�7?�ۿ��jp���,����sQ�����x��5!��F������zۇ��'�ڗ��l���,9U�U\jSg�_�}�:7�4ޣ,�B��à�^Or?��:��SK�u���#�'^AW��i:�L`Y^}%Y�#(�"J=A3�V��V��d�p�|�2	O�1��[����Rw���e�.Q����v)/]�_Ϸ���剔i(�y��.Ñ�s�p�*Fйڡ�k�庉��Y:-��ʩ.�������}�I���6��mn_�~N"q
-a�X��<W�v�!R�'Z�O
-�k�=ߵ�O^���)��P��YvLP�a��a�ׇmO%��q���x��7�=�5����
-�iT�|�~�x�N�
-��s���:,�N��3ax���/Sb�Wx}�S?֧���o}��X�b'������w�u���L����>u����>ǉ��S�~� o���pI����
-�����o�E��QɢQ��&[�9{Q���"K��Ņ�I�K��W�t�t��,-p��vh�;�{t�xe�
-�,GV����ŏ0O25
-�C-��`ϫ����?p�P�G�꧝�2���BۅZ��h��j/J���φ���#
-�5�CU(#�ΑW�����L&_%�*�z��ß���9����;�3�C6��]\�J�L��E��&�/>e=ze����G�B<���V_��_��]EE�K���{� ���WW�X���/v�X�����A�r��V��6/8��>7�@=MR�Y5���,~I89]X�U�����r�k����o4d�����ֿ�^�zO�)���Һ֦D��\�|���dl<�9��Ē����ǋƋY]�����,7ޑ�X'�h:���1Ɣ%pV�Lw�]'���ף AT�۩�e����xDѢ��8ܒqa#�3j��W�
-S-(��J�~��/��`���/�a�u���c�yM��y<�_�R�k7�,^>�y�e�|J�s���������Y��&��5�Q��_�2�[ɬ�H�M��N��}�&q�W�F?"7�|{.ms����k*�F:��	�9�Y��2�����/��/�=��$�X������0�P=�+Ms:X��{ۑ3A�N\��8�w�Zd�d���"�
-��.fDl�D
-�f���(�\�R"Tֳ��9�,Y�ltC��W�
-Y'J�߅T��{C��\�k���2�萄��W�C�_���-������+�Z�zn�Byd#��#�+�����H�^3��(����k�m®�Cܭ;�7�ϓ���l��?���>y������bt��[?�;-?)����<&�9�����⿡�ˏ��HW���n�,��jq� ��:�n���]��X�t;�!��Ȃ D�mX�޽
-��Y{K|8k�w���>���s�xz�����/�?�+4�5�%^�K-d������x�#4֑�[N�d��3���N`�d���t�X�0�����c��&A�k����eg�Lރ�ynnTf��`��%����g�N6ٿM�����.��L۹dʖ������C�C�m�!/��ݺ���h�>apx�@�J�NBzd�˱�ם�a�����Xt�x�V�_�!����3_uֲ�I�K����w��b��I� ;�`���:����
-j�	��5�(:Fg��2�KkS�����M\Ý\CM�}��!�O�;�vr}fdԶ��vf���(x��05��=k5�*����u	��,Q����T}���|���EQ��[ ���ֈ���Y���n��[���
-�5Q�_�<V�̯������i���j	����͝MO2k�%e�?������rǯBv��kLi��qc�b}�~s���-����ؾ�Z��l�d��L \�<� i��d�_&ީ�蝃��ʪ��ZX��QOW�F$ S;�p{3�(���jmb*�X���D~ؒ�����w�9C�]�Ȅ��a�G��D��j�H$-��~�.�ym����A��v�;}��_��2"���}u+��<��NJ�¬���٪�7wS7����p+�-���e�[N[�1�۟ӏsJ�.(��&~_#����I��K+���i�ʺ���1��7uu�=�[hS����Oė3���r�="�����¤7n!U1d����9]� �_cb*��X��_hlp��e@�)����,�i|�}£�]���}G� �j	近�}���V����V�ƌ_շ�=CP�V%թ�g>�g�:�u���/R{㄰��x�aBDJBEA��'�m�&�� ����j|� i�RC�'�z�c4l���lm�#!t���3�c��9�۱���!��!)���tR��;Ҁ�v�4��\dD���6�wyE��H��N�~ͿO��&?��)�e=U�)�򪰑wl
-$��׷�������h�X�y���)1��� �����*M��>�\:[���ЭPC��?P��Qtq/���1��8ù�ÿ_E��*�<J;J�cbA�x��Ϟ�_����
-_E~��u�sR"�q�_�E��~G!��]�sZ�:
-2�m>k1��Up�R�
-�F���Xe�c,1��[����F�B�����ՙ��WB�5�����,����H�ֆk��\z�#��y�����k����D�5X���|�,�}�sFV�"���!��9f���3�,7�W����e6�T����<GXG̥1��}'���r���;'���9�]����'�[�~I�դ�����ˑ�
-y���ٹ�E1Բ��Қ��&W�DT]��Ϛu�'�S�B$J|��$�_�����I�e7�'���o)��ʞ�L�Nd�������C:<�F�sWF9�nqs��7J:/�)�{Y��_�rV�&�r�&	���Z�ݢ5����	��M�o�wy`��;��lB�b�SO�{��:>4h�
-��7��r���g�
-�D����7k��3r�:i3&�o�+�uV�[�a�� he����5���|�-���VzU�f�f��a)�R� ��c�X{҂�[���6A�|�q$��SV:�XK�^�p��-��9ύ� 'I>(�o�X������gO�#�5��9�U�3Oyc)"���Ԡ�p*
-��$[�r��l5����1"�vD�#C�<§��������g>�`�-�%�mh�.>���zg�"�+�L�U�R�Oks�D	����r&���a�'�y"�CtY�S����h`Z���VD�2�����uJ:���=�֫$qJ�C!�nk�Ks����aҶ!�ߺMy�;&���2"'�����;��}��1� 0�$���7��"�t��OE�?(Ϸ=��sn��O7Ϊ!>��Z��������z�s���4g'�=���c��g.K����{a������*�]��
-��cxN���O ���!���82F�0��!��
-�2q��յ�H@ֶL;ё�ڑ�9B�ض�8�{��uχ'��ι�&��U�7���
-��|����i�]zՌJ�R�d3n譞d���y��S&ny��`��R��;2�?TU�m�Ὗ�I�pS��{~v���۠�u�#a׆_�>8�~�����s�DV��#-	��"Lpg�k���ut";8�:8Ɩ�6���s����˻�@�����v쵥��������(�T���'̱?��?Tƕ�r���'l޶o�\~�	������_lE�.�������?Ȱ���Kb5!���ǳq��*Hb���ꔽ_
-�&J�ӦB�J���9�9UyD�ި�C#vjߌjy�(��D&,rY*�mW�!�
-9�����J�b�Al� �Ĭ���>��
-�V�GףO�c:>������uQ���le��ҹ�'3�N�X{2	?����$ mRSu��e�D�9绀����/��-�=������;��p^<?5�I\a����v�_�zo�[sZ@�(Ǻ�e}c��C����]J:���q���{����z%>;�!�n�Ѥ�r��	���N� �F	�VWr�$�����b��O��gF����<�S�8'W�?�I�<s�9E8>5>;��w�[Ɔ��go�)�-4�P�����C��D��Nj��Ta�w
-��߃�mtV���s4�QAm	]V�VY��Ѳ��F�s1�uu�(�gE��E=(Y?'�H4�j���۹��ه$���ι�&���h��8z��ݩe歇`3�X�z0O�;K42�,�C���;
-�g�M�P������8�ޒH_rچ��W�ۙ�;�Z$W� [�D��S��=am�K2P����@Z����Q;���L�l$���ZS �P�V�(3����i^�0��j�SNƓ-@,��Y��D����:*:���!�6SA{�ƕ� ��$7�S����}��+z��V �l�1H���(��� ?�>��'����4f�dE���F���J��\HE�<���-D�PF6(/�Y%��`�N���4=NF�$Z8u� �e�B*��Ͳ,��Ν�I�` ��݂&�r�������b�Cd��x8H�hx�4[ns)�r��z�D�C�َ���;�IgŘ��[:9���6:>����*��X�3Z�)b�ΐ���7���V"
- 80 	��)ix�)�1��2�]���	���7����5�}���D�I K2��@�	����_��$P��)D�C��T:��a;'%
-t̇՛0c�6�`��F] ����=��x\�����^�Q!�cL�[.X 1M$ҙ̎+{j�傳W�H��h������~-��٢��h�m�$f�뱝A��IZ���W�T� ����κ��N�aW�e=�#�%Ш��3np�M����?<yL��ȻۉS0���lG�Ն!X"��S�6��p�pZ� ���N�t�&�&
-�T��A�`ŧ�v�����vK3V�8:�4[�#��iF:���oF�x��v
-�
-9�)��g�e������Ud;� }mq$�Z�1V\Jǐ�A��o�ӧě*�!�����CH]�����jQ���p�7e����U�ᩌ{��g	u[?.[�Pi������X�k��L2�Ϩ��:�c�����h���Ry�^��q�,�?�f�%d��s�베:������T��yr;��d�$I�L.u�a�嵞N�
-�=0�މX	�B�d�������\�#5�dv3/��qer�1�j��{5�ˮ����IzI�΀Fx/�XG�&�2�D��HLNYW�p$�E�t�%�^�9D�AF2\�B� $���/-2��4�x ��85�&pqU\�^�X>t����ٴ� ^"B�0�z:I(�瑑9se�E�	�)�m��W�13ߐ\�˘������<��_���D	!F��\�\�NZCw�/V/�C��PhM4Y�ܨ
-����(7 Y$v�$AW��4'9����8� ��$�X'B����J2�iʺ�yE4
-����@խ��3��1kF`6�Q�t�m�3�R�Qj'�\�Pis԰L���JaC3s̖V�����L逓�eb8��b��'W���7������;d�ǡٻr�5�Q�q�����gG�W���k0M���N��魾�m<^^5ǃJ~�Of���
-����V�/����K���[w%���;g7
-���f֮]�3\ ����1K:/����}��\��g�̣�pt9A?d����=}�#-�q��zdC��f���lȑ8v�2����o������:�U�����0���ˠ��Ő���J&u�`��]5l�<%�M��P.IF�:KT7w��Á�*�&��nf���P~���
-�2Ztc����e�w��2;�K$M"��&$~�D|�Ƈ��@P䀘�sK�-��g�(�¼��h�bB�~T2�9Q�W]
-(Z�8�%�Բ��E�hv��7�Lt� N�����x��[9=P2?��7�
-�q�uc�A�_͉�F)�cc{�x��x�δf��܋�G@�^g�[�c�X!p=�&
-8d�*!8k�:�z��0� :����ø��5Y"AlXP��24�a�b#C>=)J;�ʇ.c�1S!��nK����Md�6s/"�<?��#��Ms�^��G1��
-�\�M�R˰�S
-Dͯ��<���|��y���,�a�٥������^�3�W�2� �r�l��ĒC �'����7,�Sƥhʐ���A��:jz"j?8˺Gr���
-�'�E�5�Pl��Y���0W6��;��b%J��ˀ4R�&!�# �G���,��<Z=��t4������o)����	݋k��A���f��P&?뼍��R~�0��Mڔ0d4{�؎D0zOS�_�>1�늓k��v����M����x-�j���Ȇ0S䦍�pX�V$�M�D,����'�L?W*��hͯ[2
-���Ql������T~�ه��N)����a�S��"�S[�N����|J~�h�g�X��+Y"~\c��l\��D!�c<uQ,J�\�+��\"X@ԯ��y%��
-b/b��l0v#DF��
-���Ч�I���w�8H2�!�HH���f��g~�\j���쫫��}��s�����N��H0���^�)h������^��x�+��Z��u1���-2�� 5����p4n�2�[ův�Q��
-,K�-iL[�j+�$0v��A��8H���abj��p�To�=��U�%��ݮF��S���Ճ{3:��K�r��8p	�<�5M�]���ƈ�6L�B��֑2X�O��n1����1�X%_���[���ı��N%��:-���Ջ+�;��by����Q���6UCĘ��L��0�qXj�c���SI���x�u	"���A*��C�&qށ	�d"��;�_Y��\��m4W�F�6�]U��t���\v�j{o5
-��z���M�Ęf�Tl��n�Gʋ�:�͘tub�*����pt��AN��LK�i2қu%19ܩ��$�WZc�r�>:>4C����K��
-}<���"&�������y*�K\|1˛˘O�G�[;�Q��s���d�w|� t�'�/SM�^�������^Y^0njѷ9�d��r��`�����wRl��I��!�7����H�#q���g>U���6�Խ�>wN�=u���j�h!E�E�$�d�ؾ^*���6�<�N���J,Nn���b���MZ-���3�&���O�"F����<ϩBiW U]]�b��Bf�{\CJ�n�5dnj�Vk4���*F�x_mF�Z�X���`5�۽���2��i�C�������PU��I���Q7I�g!��˙�z�
-v�]��B�U�c�)c�
-�J}5�D���'����W�/�U;Ō3@����r�v���W�$����r��h"��8�8I�:����,�,7�)��YF$�́�����DҒ��))�9�J���g;�
-�,�|m�����.Xɽ{ɍ���lj��D�ݽ�s���P6���5�vc��|�	��0��97tW�U vȳX>���`�L�|���)0�摨IXˋ��*8� WJL\��(9_`�P�r���FE�e}KE����;|��>�tp_�s���B��ftsZ�"/K���8١N0���(_X��bK������������EX�V�dyjA�Ϊ����7B��q�I��Wٝ-�p�m��1�c�xR�%ݎ�G	���h�sr����:�
-T�W���Ta�X'�x"�AEx3!�Q{�8�|]4�N��K�ԓ�գ�D���c��g�O"O��<�]wi�-Md�7oۋk�y���7��3?��Y��g���+&>Z>'�R??�޽$˯h����ߔ;�� ���!����{�q|ȿӷ�����OT���� �5qy�p,�P���pb-������'�k75�!����u��6���H��D�
-���N�d�6d��){��3���.�[#�o`"m�U���g,��8����,\�g�K(V��-�Nд����$u��r]]x�����]�_1���C��S�=���P�">��נ�.??��>�Q�*��Y�Ӑ�4�MK^��4)%���Ҷ�au��Q��33�d#��QF%J&�N�q[�
-�}XYHu�o�y�M�}ͪI�zP����pM8��k�sw3�T�$�8Q��ɢ6�����[ąm��&3��f�d�n���&Z��I0c����9wZ崻E�t����X��s���_�`Ft�&��_j�Di�2�����o��&|���A�M��HEIR݉,HRf�A���5�N0f
-��x.�/�x����1�@�`�dC�J�:6L��.�I�K@1� �b���2�6�
-D&-�[*���+�S�q��~v��3Q�(0]c#g��#daD*�C	7��,�ΐD))J2�
-s��-��[5}d{�.ɨ�� "��P�Ӹ�h����o.�cQ�S�JY9-8В��D-+�����̠��m���Lh��n��%�#�P��!�yL�8Rj,@�WMc��B\hb���:g:�}������e��-g) *Dh�gYnU���LL6��r���,�u��t�/�,�iۧY\�<ds'�+����T+;Mļ�_h�)���]K�	�u�$G 7Bt�~В�Д��w��m}����S��BkE�Ҹ�'k��	���P�H)��E֜J�3�43�-�C�I�2CF��C��|���âΉ����'��p�{��
-N�����c6w�!I���.�Ѳ
-�����^q�x��c�B�a�C[4�1�kP�=�uh{�cX��7fln�}\_-�%␮�u��a��������q������L�Z9h��y��G�4�1�l��E˫,Ae@%���C
-Ƶ}���ٷ^w�`�T1��8�@.=T7/3�hķ�6yȥ�^k���G�g�7�&W���ť���A��L�6��S"����נ3�����_x�b�+��ve�P�,�&Tn�8>����|sm�]���؆��G	��P��j�S~O�N�OP>�n��|�fz����K�w�^�� �6�R�
-8-�`t^������3Cʞ8��M><~�������/�VN�Nra�Zn�L�>�'?��X�4�zE>��+OV%�p�/�US��E��Q�@9��a�S���������/�Ԕ��&-�-�e߈�����T�z(���DA�����o�n87Ŷ
-��=���dI�8�)�� eee2�*���vsL5|��#[�ۘ��!�|�?��F��AK����N��]nf�ֿ��i��[����D��i�0u�����e��DGYW)�Q.�Ϛ�%E���/ZȬ7Kԑ��(� �f:�s���
-�w� �����ɤTc� ��Yc0%���(X�LL�J��;]�PƮ��NbbΖu�3�����H_�
-v�-�i�@}X�5�o1ͭQ�7�� ��?�\�gZ��H���P�1{d�I��#i$VQ�NR��!/&�����g�Y}JLJ�����ĆX%�za80OӁa�Xj-5TG������X��L��"���f��[�!�*��$_1���p�{����oj�Ǥ�{�dm�y����j��~-�t����o�|~��7�"L�Y��^�Z�y��-�l��$�������%GӖ����B 
-P|��r�fYfK�"��1��`����qIkY��iE�bt�?\�E֎K�$BP������G kx ��0N�!�[�8��쓷�+��#F�w�#�����/B5B�N�ș>�,$�	e�A�"1�7��U����RN��,7d��nO����=1M|�[%wbU$��
-�
-�F/L^C�e�Gnn�'�T�ILH�ީ`5��r��3������ӫ:�?4��;M��Īr�!�q�
-[���S�D���oU���x���+�C�!P��S�JoWMLM4b���+"�ހ�V��D���E��a�9\�X�ƫwU=� 
-u�\�~�'��0�8#hd���G8��S���t08�����~{�Q9沂|}q�ػ4��&5�m<��&���ox(C$��Xu�x"��K<Mvj���k��{��m�W���c=Q�qUU-�1J)����]z�T�����}0� 	|�����784��{�j~��S� ��� ���(��ح�r`�)�{?���<�� �f_u�0O'6�
-�6���B;�{���0�\��QZ��!�y�l\�\:ZJIV���5*�ń��ZEke�n	��Ү�ї��d?�&̀�!�i}Fr��'c�]���!;�6�F�}Y� �
-�$������u�8��=[V�
-�H
-�Dwv�n�Q���P�Ïk�ةa��js�(�oHtO�7��۳�峅6O�����)���\
-�<��UP���x�Pr�۞GeQ�N�d�u�E�r��B=�ݮpwK�����Mz\u�R.���{��$&/���үa{����pa�_}Jݼ@5��X>���-%Q$����V�$�9�6f��
-�qyC��i��v�A��������Ϛm��lτr.L�Dd�}�e
-1�� Fԡp��oŹNO�n�:���,�֜e�T���*�D��߀�O ���� ��|����X����G�,�p���{d6]�����/�6�'�:I���L'[���*��A�@���Y`�� ���{�~3��FpJ� <J��Pi��%�{��"���!`�<Fc/����C%%z���Y� �#��[�B�R��ʨW\_����j��U:��]#�_���o|�
- ש�ul%J���,J45x�P���e �I�	P|eHB�b/Q
-ߧ�P�%K@�Ⱥ��MZ��wB�KO��"	oG�(J�8(��	��
-��y�!ҭ'!��P9ČSA$N�N{�'(��js��,�I�ʻ=4c��ŋ�(�$T�C�����D���qm�4���R�,R5��w�iMG�3��Sb��h
-�$u�|vm�e��Y4r'�V�E���G�2^K�N���D²�y�hA1�S�
-��ꋮD���,��k�|�QU���:]�/�ǁ>M�t2Dw��q.�P�81)��D���p�
-��Lк�U���.�f�U!&�G��1#��� mP�F��W��h̠��SὕKBCmޏ��Qym^���L˿�*����eV��^H�7+|"y�cEP�m��ɈS��Ljqr�����Մk;^5����ڎD�A���M�-�rT�T���"���}�Ap
-u6��C�]&Y��sR- �=.���ͺU�,%����ǖ���Pr܏@d���_�H<x���� AB��%B�q$I�&C��}�;�CP�)P�D�
-Uj�iФ�04m��;�G�CF��0eƜ�#,Y��a��{9q�w<y��×	��Pa�EB�"�M��Z�
-tgtj
-���)���)�=N��(����ov4�jY�HxU��Xs���� ��k�E���-�n���{�b�Ŋ'�y��%��>G)hR�ٖ.S�,9�����\y��ǀA���]��_;�N�s��X��DH�THc2ĵa#��S�C6�ž���3��uySn&�c�{f��]� ��0�L��]*$�D�HY"O�2Qi��s6��1C�.*�B$DP��v<�����-�5�`ݷ���mk�A��+z�+|�q����0?�O4�M7�C�������he���>��!�d�1��������)�{\	=��Lc�nϛ�S�F������Aj>�m�[1�~±]��aHp�QY[�֐z>%oa�u=���>
-   
---- FICHIER : C:\xampp\htdocs\Johanes\fonts\poppins-semibold-webfont.woff2 ---
-wOF2     @�     �X  @H                       ?FFTMn@�` �b:	�e
-����C6$��R  �p�Q�?webf�%̳���\䦂#�`� �9��@�q ���?'7�����HPdg�d$\�Kw=5�]T�ezn%	�hؗ�+0�}�� ��=�q�v�^ɇ��R����0 6��a���H���,![�3��.��_�����&/u	�����yp ��$*@E�X�|b�y��ϯ��Uwb6���s��w8'��8�S9;�J�B�,D���X��ڢ\NU��>�Z�+��{��g�RZT���d���vz�i��R���;	��0��i�}Ü��EuY�Ԧ���t���KmU���_g9#������T�I��ۺ]-�KG����sѤh�B��k- x��`i������!�4%cL����Ϩ5"B�p����Fv���3���sY!�h eU��O�����,C��
->R�&@eL=Y�P�ݷ���l�~v@~ϣ�n{6n���(IovNNMHV�M��r�j[���а?$ ��! ��Z�'yA�����ؑжR����f
-@
-S!�d�H�
-����i��Ŕw9Y����4�#T�
-(��(F�($�QtF�����R-���Y���/���:��"�����> 
-,�,��,I� �Z, �?��h�G���P������ ����H�����\
-3��M�V9����5Aot�Î%�A�H��}�v���7�O�3����-w?�1����ƚZ���	�'��׺���Gq ����p=���b�n���0\�0����"D��4�<H���%�0	n�6Ȏ]0@j0��m�c'���7��ɗ,a�o�	�u�rb�j%.@��{ٗ6Ep��ȫ����*P:{+MP��3�E|�;#À����h��#.¤��$�@�]x�K�h�/��Mf��=l�X�c>%�#�4�������M�����m9��
-���gVI�|�9@x��o ���
-"~�1<���K�A ��/�G(g$���?Gq;�n
-!C��t��(�\ ��j�P���U�O��4�s���u��c������^�w������S%<�\� {a ��Kv�{��d��ł��%��u���փ��?�+�r�ÊX7��B��vX����������O�=�w`�ՃWw�6�C�j/>�Gn�8���Y��DQ��?Ga��q�Ac�d��˺����r��O��R���2�r�8��AYEUM]㌦�Ym]=}"��ȘlB153�8giemckg����������	�sr��/]��khjln�y��������ޞ�����;�i
-"�e�W�W�L ��.�nx� ��(i�8�;� n{��+���c�+��W�
-��������{2_�(�+.)-�H�_��p <L�f7�aۡo~@$m(0�?^�Ȇ���UIz�d��L�E�O�?�,����jL�����'����=��k|���f��
-�h}R f���s�N��H]���q6i���JR[cx�����������{�`1n��%�,\�y�	:+u>'j�Ɂ|��8�l��1��,f������]*e��䚇��$Q&d���w��V\)�B�׬`��wNa���ơR3C8���rp�E3, o������Gi�$��R���'� |,��B*Jx�&|�Y�`&�b��L�1r7V�Nd�^x�3��ҨL��M)P���c�8c�5��+2��}r���[>Cn2G?a�M<��aDv� �yC�`A��a���ys_@̧��<��ǅ��p��1Up�%/ �+�
-?�2��| 6_	����?�]��u��!�@�#
-�:.l�&C���|��$�W��A!��S�P}(��"�֨�,�����d�Sn���	�'j+�Sd�ar�mG�g;�=-�	ϝ��:��i�Ӯry�������0
- ���}z�Q�)R�蟦82�������旑ElO#�7�&��t��/�2q�o�/��U���<����8	B��4��D��R�s�7#� ���� �$Ĩ�H|��*��R����s�c��SFJB'�2�1��`s��͊�09�p�����!�@E��!�aD�a�ʼt���D׊&�mn���b�X)v9��^БdLN���\�'
-$��˯ͬ�
-�4f��*�b��a�NJ[������d��,[`����aEA*C���I�]@��I~�B��y�un�i��pp~Y�k�u2����&�Kk|�"��O����
-\�~Vk��� 	�`y%����;����/64�X%�v�TV3{�&�85�y0���h�b�\̚6	"�kHuW'#�r���㋘q�@8ҝ��#�ey���i�N���Cޓ�&ӵYke%�D<r�wh�,��	�;,o�ӯ��`����ؼr�\cX�X8W�!���5��gK>:s<=#cwW����fyf:36o%�@�� ����D�_��9Ԃ���|��5�ru�s(O����N���oo/k��5Lۜ�f��e<������
-�M�^M���e�K�T�V"V��I7�ک��Z�~^)d<�x�T(��ɶ���:Y-�"��X+8>�B�@7�:JM��~�9����0��D�[�]z���v	3yZ<[
-�|i�v+ɯ7ʴA~�m��fd��F[�kȮ���XQ�}�\F4�Rﳦ���qY�ՄL�
-'�����&�o�����ii�g�x~A�Ng���-G��YM��x0�y R���zi-~�8�ʝ��~� W$*��6�/7�`%DC8�h�J�W(Hrb.����@ѱ�1��O���]kMOC J�������xP�ˁLH�D�Y�Ǚm�P�J��Cu"�ŶK"�:j,S�!��fa\����3΍�a�Yܯp��̌+�R��kY�+z�f����D.;����^�z:�"�p �
-ٙ�����4�|��('�K��2ϐ��6C9Š�
-�l�(C+�q7�� I�a�8����y�!Eڃ:7i\�9�;H5�"�>���(��]B� �&H��Ф��(`����|k!�G�a�~P����U/�0��y�q,���+�1�D
-�\j�q�=�9���=�������pY��i�MO��98]�ͤ��˦�JDJiWvf�T�^�qD���
-��	f�n&S�U�ֺ�h
-ǵ{ް���Չ�e�X�ɬ����P��b�^���6�a�/D�~��Fy֩��)0��q�B>�j�����(��FG8�����]�!D�����ɍ:�E(o��)�3�_CrQO���7qE�[ [
-��ֵ�c֌�������x�h�E0�sE��w�=�����������I�z�_�?�fvu;��L�c..�u��ꠄ���-��&<�;�s��~C�E��yfK�ߍX�����Tl?�kř7�X�֯-�Ķ���a�Yl'�hHv�s�gl�14���g��i��l�AD�&��C?�/ș,�fr���� O:�@���4��(�v��7��GՆm9��6� А�H�ħ�M��mk����X�k�t�vB���Xf}V;����3���w����m5���L�4��|�rH�_Y�3�gU��Ey$a��|�����-��s}�+�v7A�Łο���运�{$�I��Å��H�ۇ���`C�Z���=qD�j�a�&ʴ��ʫc�FMhQ���q��Լ��N��tDLa�����`W��ⴻ��!��8C���X�xtD5���5�����qٮ�f��P�r��޶ǎdכf�m�5=D���/�>��3�pw���G�(�����W��]�%b���$;��p�1�/;�
-����bT$����h��#VwM��W�e���!��>:�TL�$�����y��}��d�M���c�g<wﾦ�O�wsl����s�$�%7�ШhD2'�B`@��t��0�0�$ǾO|�I|����D�cU��N��.��4gSL�$�Y�{�.�'����=~���������t��Ԫ���sg̐�-݉�5�ш�B�m��ӄ�v�VHI����m5�2LcW���^v���"�[�M���>���ڙ��F?�"���|�I���0-K�O�<S�}��4�������ג��5������1$vR�
-�[��󉭓b?QHO�-^�^7�7'E
-����K�5(�b�a`qgr�~ӋZ����y���yދ\�|�:mi��ܴ>�9�+�?��2��()�~�*\g�k=?Q?�ۻ滺�z��{�枦D�U1k6�䂅6�Z��9��jMU�71�1��m�����*�ob�ڤ�d��_��蟣���+&'H��R3����6�_�7F�=kk��E�k�^!�Px��~�w������*�&�w��c6��^!���i�����72���O2Y�"����<�^��k���G\D<�WU�se� �E���x���lڄ�Tx��B�6���G%�oY�Γo�oR��a?O����d�jl��}U6��.�����
-ǉ|�&�=_�GE7>�/�U|אP��Ĵg%���m�@l�ol�|��^��Y��AYo�g~��^�N~�<�r�غ�q!��(�y�}�w�,�R��X�YE�N�DM}�l�s[d�\�/؎O�O���,
-+h�5��)��=��}��ʛ|�\wWk	C�]b���b��T$4n~vg6���Z?x�	\ ��!�&��>:{�ݙ} �|�ϧ����#{�W�;Z3�������[����qo17lĜ�~�f\����l昒�'�&��h�-V)�G,/��5�N�ZW��r�Q��t�,�k�݁[�=���+غ?�����F{_{ˋ4VۉdU+���;�6�]����H������O����٬��^�{D���<D7a�����`rIB��~�{�'��]0���^Ƕ����V�UH�oۡ97�9�a����_�Sp�'Π�Vkl��y��"�ĆQ���i3�9壋qc�3���_p���Ku5�Xcl�lD���>~>:o�e�(�����{���á��{���2�&�|>p>p:�!>�ϭ�*��?�:o"9�9����`3^���L�|iH.Jj���x%��r ���$Y׎o\��e�Şs�d�q.(U��E�
-����#B�>�<�ّ+jy�Za>O�Gy�TR�q������v� �������mH�o��)��t���~�xLpo�}����e�ǭ@��t\�D�r���ŀ����/"|6�63��\�Ǆ�_�䫤W���sXK��i@�tE���É!`&�.�P/��-q�}ΐa�%a�rb�n�m��=�mI5f���*j����u`+�+R�� _�Pk L�q(z��n`	���6/�!�� ��w߀S�v��']~B���o�*b��B�7L��V���+\A�6�h���uW?D���a�� GZ���)*<��pp��l�u�|��R����!�+z����[đ`8Å��E���ϝ=j��}�8.U���x�q�j�MI��}I
-��j�N��s?IY38aٺ����V����ӌ�d)��ƫ�kO����@�Ue��d�Q�	:φ>;�IV:=�="�(7�MH�Aq5yR�B�߮�_�̩Ml��0N�E:h��ط㷗E"���s�"�{
-�}}�L�j"�e(&����7WHe�q1���RX��c JF����~���O�|�&�I��P̍6�6�|��0>m�ǿ���\�P(�-+b�Q��,t>���Y��:0nn�|��t���I�)�P��TFK��\���@x��5��0�lM�8-=������4gQ�9O��l�����B�M_�5��*�ZT��"�u�דjvaT5�nt�)B<�0N@T���Y5s��/}m#�d����E³��.g�����
-<�tL[��<�<�X� :4���Q� �E��W4�x(����_��!���c{�0��K�}l+y �%�Z�^^���;9�Ǉ͊���/*6>�-�L�V����2�H���Up�و鬮`�?�:"G6s<�rIƘR�c�b��p��G���&.�S�M7�.$*�U��
-aau̩� ���'�j�K���$�<�s�H�
-�H�_�-
-r�����'�D��"o�m�m�����U,2%C)�WO�^K�)fa�ܛ��9�oP��-R�a�����Ƙ��|�"Ve2�&��\���ۯ�*�����9��������/=�E�KOw�n��ގ�=��:�QQ1��ɮrێr$�,>I
-(���(ͪW�o�;e
-QJ����D����7}3hj/j�HAT���0!�׍7�54�O˾�ޒ`�/��ELt�)���x�q%H�Ǔ�ow�9J��cJz��^���B#p�2D"F��E���̞7��c^VQURaUVqu����DGy#G]#[yVq�?��^�J���e�����E�I���Ryo�����ufk'Fn<و6J�xz?0�HkuvQ�|����W������/~Pr.WSUZS�����������Y���
-�7��T�
-�ŭ>�	�YeH6J��
-�C$��~xd���I߈b�9�
-{��(����:w���Eofs���GH�A�����
-�\h4�{�6J�޵dkK�Q$�F�Yg5��d!be5s	.�u����ޭ�ܭ�N���(��t{r6D�[=��6����l�TIq��/_��$��@��7
-�/&��n��*�ݑ+���9kgG�	��P#+C֪Ce�`�[�=Y?�
-//�z;��j�jk�gm�/��4C�p�=��rvS�}/�� b<��[Y�s|�2��R+�iYY�S��:���I ��@��d.iTr��T�4}L�$�1:�Z���b����7V���Q��fƊ�h�L�Y��Zǌݍ
-��ெ������g����U!��慱o�`�hN���-+t��ݹ�6,o A:|�oŵ>�u�-��5Fi �	��D��QҔ՞�������H��č�l)�G5t(UH�/�=a9'u:3u9�9�
-npv�W�Z�Z�Z�R�l���@���z�����<�{Y�7=��c{���6�=PߙG����"۲m,�"���S���rzRLJ�4!��@y�(�#'�\C�&��p��m�F}��x�vF���?3�U���P>���O�)=�\��tȶ>�:�X���oƩJ�pu$`��S�;�e�O��4�"�"t&3��*|ĭ�5]�p�ge��b�����X��࠘F��ڐ��Ƞ�󛽳^��������f_vO{5^V��ЍH�z�b�_O3��?�7�Q�c����(�q�c}�U*�؊�[ ����>p"8{�H)p8�3x��Rx�r�B�>��gf�_�o��{?1J��"��{�Wk�{*�SGs��O{�/A��֔{�][���`����hs_���`W ��7����Αk����ϧ>�����b�e�'�˦��9亸 	S�X��+1�6�F�
-��3{����F�_�N�i��f A�������IO�:���:��~kF:�������	��=��b�!ܑyo�+��:2�2�m�d��1Ǣ�\9�oE��US�X�l��2���0�G
-��lW^\į���N";�X�,#������������m��Pz	�ѣ�|�tO �ˍc捆Ɩ�z\C�wwhd�������tu�ѓ��aִrF����)z����l�c��:d�?����|8Z��$�Ĳ>:���Q���&����4�R�)3�u|(��X.�#���Ї2�Gn��&n�a(9�Cu��R��a����\w'�=�>u� �[.N�Z��+�}�����o�r3������2��c�*U¬����Zs{�#���vWm��y§�S� U� �|���O���1�g߲jܳ��c�X<R�FN$z�9,�o �F���i�bA�ۑL���B1,�ӽCK�,�n�3��l�J�z�L�K����	v�rqvH�	&x�L�Kf�oC2~K��0�^Y&�^�]��O+1����4�9
-i�Ss2��3A	��;}���>;��e_RKR"� Q:��m�ﭗ��¾�J�v�Q:���ZL�gx�R�m�A�jpE�W�����3}i����������NwW�il��o^7;P�'(���-E/�~,܅-73҅W�w
-Ĩz>I�-��Vc�)+��-�-up�
-�Ԗ�#�k�7'O<��oo�
-~�T¥(�NpU�pF�"J��ro�
-=Ԋ�z�O�g��� � �˞>tpγ;���pT�5��.����	��	�^=���:�r#���
-��'�Mg	�b_�[���(&�*3�:�^8;���=�� Xv,�7����j��2�Y���U^�AP�:��=����0|��F@��]2��Ҝd��c@�u��e��j�z��ҁ�8����W�W��$����
-���S?��c�"�!גƸ��Y7g%3/S��!!�4�6�;Lj��Z��u���������ԏ7�����3���I���Ǆ��YK�.G�k���k�ᶟ�Q���p���`�r��]9
-y�R�����
-�z�"��Y�}ه����=ķ#U⽲G��R�w�Xˇ~���1r�OZ��� 뷍�Y%�wx�ȉ~
- �k��I��ծ��AT�մ���Jf(������(V8�_���3p$����ԄI6���@��಩�͵���7GБ�N����/�b;	��̷f��DVxv��]�?h�{0W�����u���(n^=~�M��>{��qo�R���Gh��e�&���������ô���,����S�M��|�k FT��uj=�Z0h ͪ*��*Q
-��b��Q��RF�X��q� Q�	�P�U�x�G΅A�Y��Ez2�ms�#�� V �j�^��������A܀P��i6�Y���A�s-!M:��%dۣ0��x���N�5�L7נF
-M����sde�3�@����tW�ⱂ��V�NY��
-=�2$}Ni����̦�e�&+ɂ8I�^��%�P��Ph~�F�D4��h��r��f㉌�ݳű�21�S�`��#���S��\W#�b�?�8Tٍ�Mn�x����Jl����%���_��t	"C3�|8U�(e}�Bhď�(�Y��G� �g�i�@lh.��ft*Z"�m4��(��4�q��8�SUzc:Y��J!b�J�Y�`������nW�����*L�u��^��q�f�,C6͉'�:�1�#.*X	h����c$�i[�4��UpT3Y�L�d�}�q�];�})xe��FY�.7�B�]�t=�+���5�ȣɒ-�����I͛��2@	 &]��9/�CY�����
-��T���D�-LV��8p�j���>G������r��MHP\tذ���TK 
-Ҩ���रq��+�%�6j�M5ح���/
-�e�|�u��k���D���R��7[�6�w���yx;	ͩ�:��<�6ꉳ�|e�T"D�E�����1�7�����;?i}���P����}�W˸�V_���U����ڭP���/Z?�1��ZP<HW!7�a�>�0��U􆳨�a�Cd����u��	��UW4����!̓�k1��f^��k��e�c�	�����(�RpF���l%N-�u@Se�[�tjEI�6�MY�Dl�h!�b��Q�`Aa�
-TiIUp[:T��,�H>�/�&�%Љ�ר��w+L���2�DlQ�����Q�Pt6
-Ҫ�!f#*d}E!'fg������@#�{@~����ť��U鿈��j��]/lf#ѣCyJ���u�!�"
-؊�I)@���v����:bm;:y��z"[+XQ��l������<�H1T)b�1i�
-��3�-���*���&�uqtU4����N�
-
-�R-���R��R��u">�n=s](Qɾk����l��N'�D���`�@�f4��2�M�ڝ�9Ԡ���*Vmā�]��t���PlzJ� '���Fa���<����,�[&Ҍjf1i=�~�/o��ރ�7X]!��q�����
-S�����������Ot�ӭ:f�Kkۊ�/|�o��#�~`5��gϢp�����
-�tss1:4���PH��Za07�(_ʑ�])>��P��c;�en |�)˻:��/�v��!7Kf�v�j/�c1��,}� ����s_������z�_�����$��ELʢaɸ�@.5�j{�:%K��0aT�(c�IU'FuM1b�rD��hy&T�A�Be0��@�{�>-�P�4��
-m%z;���x�#����}�}��?]M��E����b�)(~p,���G��_��[R8�eQ�U������@	z@o7�D�03́�@�
-L���}3a��Wbh9d�D��y���В�2�,�ٞd6�WE�_����0P4�SɤC�q���;W��	��~Z"��
-X8�1�M]� I��0�a�x>�_�d_v+��1`�+�)׍D��d���H��>9��H'3
-�Cq�2K�����W46�Y���{�í�f��ӷA����G]O��<}$䡭0�N2��zd��[�c�a�'�h��A�c���d�@r�6A��i=�MV����4�����ݗ)4Bɝ��p M�g"�ưȓ�;����4����0��I�=�~׎�1�J�����+cKA^8�2 :��H�|��J�/'�t�k~(�f�x^_5:!��_jf���)�x{��F�s�gc�y��;���ڙ�"&�o�O'�#X�A���FrzD����IL��Īy ��]�E����i�n�g�n6�eI�2z�=������F�q����t��]�>]\�/L��5K=9Q��%u#aN��0�����ҡ���,UF��������9~VP���f�))O,\���Ǚ`�4���I�j�
-��e�p�0����~�VO����#
-V�4)�~�+[�M�i��$K��U���)��|�0�2���A
-��Q�/Fw��C;��@�jx�smpq��ŏZ�W��@��O�}p����Q� 8^-#e;~<�)�
-�>�L�~��&G�Qw�xr!^`��H=�+ ������qoG @8�ֹ��0��\�ڦ4�VM��́��'H�&�� I쨺�T@&�i�����$����@��fb5ADpt}��J����6�B��T��A:�l�	f
-�4��0a��@�WRi�X�tWɸռg,���ǉ�U֡}!��C���s���g�i�*m@R�t�)r����gĜ0}��PN�8�N �iNj#N8��(ߑ֯�ZwN-���
-���F��cT��a��ȑ
-l���P��n���xl�T�ӣ�աm�Z���v��.
-�m�H�3��n鲤R+�7�'�R�'�a��J��+��ˤ�d�F��$|mi�2�fB�!������M�Q�JU'����k\S��q$�QU{@��L�C��7���*:\�r�����8���t�`%�p��/ ���tVG���Eͬ�������n-9��/5�c�L�o>T�㇐�{ 
-щ�f]��&�9A�¯��\���P�<�k��U���}n,7�2�J
-[!�r��Jl���>F%�mt�H[�/�~��k;}�rC����,yG�pNJKjW��a�S��3�[O�( ��Qc�;0)�"IH�
-�1�}X��`�z�
-�@T:�5y閾�X���C��y�-GR��ǆ*��Q�$����C�q�U϶��&o/�2
-�R�ޜj B�͚���kN�0�R�Z�����ǡ�G�JT	�j/c�\�.���8ߩ��e���EY�p���d�G��:ìd'DI�Q��AT
-���� �F�,�Q����>��A��xa�wa>8ut�F���bp���ȧ ��Q'���Y�w��|������V����(F??��S<�}�4����*j�ީuu~0b�������W��푭YӃEhx{t4ɕ�
-�&
-x��[}U-����ż
-�m��by�L�U�-��HdQ淆��Nb�6�C�C��T��h�Tg�&B�4T�V3��U������E�¥���Y�����*�t��8�c׉.�y�W|'1�{E�?��+qT�Q�Ddh�HaX��9��?lj ���D���X�Vi�'�qn�O����\���}�� �U�o�s&�u������b/����n�=u
-ރ�2��q�!��� �C��q�Rq
-ϝr�'�qӂ,/���6���:�/S��g滯���oR�x���vX:�+��7���-�?�7R��|%��y��)��H���O^��O��S�oq{�e�-�$����e�R���)Z�����\Ns��r�.�*f�𡈺�5ҳ*' @����5)C�Ե]r��m���@����X��d���F�%���� Q/�x��#ʡ��Z�ԙ�)���*_ Y��o��:���m@��*M|n�E�"��I��-�D E�,���ppاނ�ȓтi�����j}�g��������\v	]b��53�L�R;�o�ۦ�TP�h���y�-=�;Z��tI��)Tpzq^�f��#���X��y��ObїiT���{���7n�A{?�7�US���2��t�~k��'�
-�}_H�.Q�iE'�����2�ӈ�t��}X���ÐHu�}�?�BR�$�.�._\U&�Њ%�F��$xl:g��p"@�:�\���ȴ�_bԥ���)$ߋ�!��qM�5PHYe�W�P�9���t[��A���m
-Q-�%R�X���*07�-��"-��6�,(�Aʚ�-P�P"��7�=�ھ;��'�t_[��:J���_��T*UW~���`&��f��=7�~�%]��3�c��ͧHdE�VRn��}q�{O�|�qx�ʜIGb�C�Y�µ�S�X7�.t�Z;mu�r{�B��Mn��pfW��)�ۧ�dF�fۺeu��[�`=í�P��k���N={Sq�� $�� �h=������@H�k�m���:A1޿t��s����v@�']�R���o�^��Ϝ@�:����6��]��l"�c����X�~�	���܌f�-˪�
->!<`�M�#O�C�G�L<�ԗ��ql�#��`9g����V��N��泐�6b�S� �UrZ�3B������q�$�y}:cHZ�NI=([n����Z��������b�fK���w��ƚ[*K-��ln:bݷ�Y_�̧��7����ª8�B�_��}��y�j�T_���������}��;Dϖ.H��qʋ_��*<�v�Z6��z?y�H��G�ha�ݖ���y�3�ɉ^����R��݇���{�YA-���&�F�e��l��[���=��i�l��j���؜$h�*u�po�l�Y�f!����m�-ù��N:�44���D:
-I�J��*r���}-�?�W����{�=�֥oh�7x�Ѿ�|!��ҍ~pٱ�~C�������W��e3�t�I_+��!������1*_4vnBR���yy�c.p���sz�r�ܸz��s�R�S��,�E2����+��ꍽ��.�y
-��ռ[Byy<���%��'���?9K;��)=�Ew�U@���R�V	�[�7'��.�p$��1�5�/�Py�ÄƩ�S��y��S=��jJ��n�GJ�b�\X"̈�Jy6�m_�^��ۻ��X2'[�X�Rn��K�b`5C��Y@��^�o�3�:=:�K&S4ö8��X��cd����a���_�;�?R�^Fv�QM��i��]`���O.�|F�R�F����t� �������j���	E�<1��rI�.'d�����2*����>��
-�F4!=t�3mu{���SL� �$�1RH�!o �RQ�e@��-��u��2cy��L�۹r;����׽�
-Kz)���6��z�Ŗ���57#{,#Y��
-�%}LtW��.1\Bg�5��??���3����$�xP�e��TFn�4��b)��|���X��>�dN�Dv%�
-�X7;�Z�R^kّ
-6r�'ox��� _�����c�^0p:��u�jvxb���p�&��e�$I�
-�E.-)�.�t&P�+c��q�t9w�3�K�T�n�!m6sjJ��H%Zrs����v�>5O�Ou��`���biǇ/�.>�2�ޓC���Y{K�׫�d��`��@Ҋ���?��O.o}xy�"IMI���O�P��EO���A������n&2}hS�gnڵ��ݲ���
-o�W�0ZD�
-��}��;��$��r�&�k�9���J�"وPED��D��Q�y�<>O��	E��=P��H���f��W�ӣ0ʖ�q�K���7��U� 45��h6��U�3QQ�����s;�:��*X7�j�0R4Ӟd;�!g�`�o�X��93���S"��%<y�I��,+����ۧ���p~��q�p�5�;�B,�9:�'^�e��� B�}���[����wDb��8�W���
-�߫�f3_}d��G=M�ʹe�:��D����G��I}��\<���,���`EX��1R�ܪ��a	�*(cq��(4?Zch�����Gb	�f�o5w�U����Uq+ˈ�U7��������T=B��3^c��v��H����ܰwl=���0x�\'�xH��9�֌ۡY�7f:@����-��W��Bl�9215�7̈���:�u�������ܫp�r�ŀ���u�����0}�ɂ.e<���3:	���B���֟I�V��s=�q�￿�1�nX��#�N	 �������:^�q���ǿ�vE��}�����03�4�(f���M]B~����U]���2-Y�����Uɩ�r)2��r����x6%!���f�K�af�i�|�5
-ct^�P�䋠z�bRӪ�8�����u���>�[t$���d��K`IKq`�GB�Űn���B��*E-	"�ޘ�~�^9 �v��%��q}�BW2��|�L$�IJŜ��}(!�ſ%��N��ʅe���i8˩E1��A�}�pG����#��<:��xhu4�>ľ�3Y(�Jӹ�\'�?l3��,8�.�e�a�x��Ԡ[!�Jԓ���:�QWA�����t��c��5n=�V�1�Ȯ0zz�	�c%���qd`+���8�\"��TA�$�`C90����YGG�Q�m�\ۖ�]�+��Ǭ�
-m�mfɝ�Ձ �w5���������D~ �I@\ C��
-���
-кB� �|� Q����G��zH�V-,!xB>�)�d��n
-�(�.ŝFq�&�7%H�ٲ���t����������:3 ��q�!8�N��'�t)�8L����+��Tj���i/�Y�樅-��=0'm��rwùp�2�W������~������W���UT��R]_k@�>ҷ�:Os�>
-BF�B�Rm��ё:����\+�C?e����dgН�o�~�����E�t�� ���Z��(7&"���Re���}�λ��ų����bS-@�p[���Ջh_���E'νU�����de��j���&[� �x�Zi*�S�!c���>�e�'I�-�K�ʛ��1Aqk��E���*��^Z�hf�b^HE�V�`�7錏z!R����0#��Y���ZM��Ҙ=�\�0�	���{�0ig���j��N �:HY,� ����� g���z`�.%$����j���}�8��ێ0A
-b4j�������)4��n��T?�JՋ�y�9=aX�F�}���^���̸b�7��lV(e����[�T�_�_�]]<T�����[��"���vt��(k�����:,���~�TbfI�~F[T��쥔)I��y�i�x�aϗ����� �H������`�)9C��4��o+U�C�Ƞ�DX�6n�p�h"|.���'~$�V�
-DBO7��Db��	3�ذ���7(h���p���N"L�(1�$H�"
-�4����QP���e*T�Q��MZ�ҦC�}�H1Ff�sαdŚ
-[v�9p�ęWn�y���)�t{��wE��@�<�e(��`�f��U7��:�͘�Ƌ�>���6�y�G��'����Ԋ%����^� 4��	q]�paw�_)Z��ĉw^�$��J�,U�C��i�3ka�X�W��mp@�W��T��
-_�u�֧߸�&�FݍT's*B�߭�+��ѷcE�`�����C%H�*��U���tc�)ݜnI�����T�?�P�lH��$"��4��+��-��}���T�
-��LsN�)g�|�]�P����B}ǈ�|��ۋw�:J�w��0[�'{반�˰�d��r��$�ʥ��+�
-	W�3$^�$]E�ze�%9��C�+�JK���5�?��!���. �v�_���#Ү�nүjC?�]�p?
