@@ -1,8 +1,6 @@
 # Portfolio - Johanès Falitiana
 
-👨‍💻 Développeur passionné basé à Fianarantsoa, Madagascar
-
-![Portfolio Preview](images/j.png)
+Colorons le monde au-dela des lignes🎨
 
 ## 🚀 À propos
 
