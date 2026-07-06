@@ -1631,3 +1631,68 @@ body.theme-clair .btn-fermer-lightbox:hover {
     padding-top: 10px;
   }
 }
+
+.info-contact {
+  max-width: calc(100% - 46px);
+  width: calc(100% - 46px);
+  word-break: break-word;
+}
+
+.lien-contact {
+  word-break: break-word;
+}
+
+.info-contact :is(.lien-contact, time, address) {
+  color: #fff;
+  font-size: 13px;
+  word-break: break-word;
+}
+/* ===== RESEAUX SOCIAUX (images sans liens) ===== */
+.liste-reseaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 0 4px 0;
+  flex-wrap: wrap;
+}
+
+.item-reseau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.item-reseau img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: none;
+}
+
+/* Correction pour Android - éviter que les images soient coupées */
+@media (max-width: 768px) {
+  .liste-reseaux {
+    gap: 15px;
+    padding: 6px 0;
+  }
+
+  .item-reseau img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .liste-reseaux {
+    gap: 12px;
+    padding: 4px 0;
+  }
+
+  .item-reseau img {
+    width: 22px;
+    height: 22px;
+  }
+}

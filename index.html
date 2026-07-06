@@ -140,13 +140,17 @@
               <div class="info-contact">
                 <p class="titre-contact">Téléphone</p>
                 <a
-                  href="https://wa.me/261387587959"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#"
                   class="lien-contact lien-whatsapp"
                   aria-label="Contacter via WhatsApp"
-                  >0387587959</a
+                  data-numero="261387587959"
+                  onclick="
+                    ouvrirWhatsApp('261387587959');
+                    return false;
+                  "
                 >
+                  0387587959
+                </a>
               </div>
             </li>
 
@@ -185,57 +189,34 @@
 
           <div class="separateur"></div>
 
+          <!-- Images réseaux sociaux (sans liens) -->
           <ul class="liste-reseaux">
-            <li>
-              <a
-                href="https://www.facebook.com/johanes.falitiana"
-                class="lien-reseau"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Suivez-moi sur Facebook"
-              >
-                <img
-                  src="./images/facebook.png"
-                  alt=""
-                  width="24"
-                  height="24"
-                  loading="lazy"
-                />
-              </a>
+            <li class="item-reseau">
+              <img
+                src="./images/facebook.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
             </li>
-            <li>
-              <a
-                href="https://twitter.com/johanes_dev"
-                class="lien-reseau"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Suivez-moi sur Twitter"
-              >
-                <img
-                  src="./images/twitter.png"
-                  alt=""
-                  width="24"
-                  height="24"
-                  loading="lazy"
-                />
-              </a>
+            <li class="item-reseau">
+              <img
+                src="./images/twitter.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
             </li>
-            <li>
-              <a
-                href="https://linkedin.com/in/johanes-falitiana"
-                class="lien-reseau"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Connectez-vous sur LinkedIn"
-              >
-                <img
-                  src="./images/linkedin.png"
-                  alt=""
-                  width="24"
-                  height="24"
-                  loading="lazy"
-                />
-              </a>
+            <li class="item-reseau">
+              <img
+                src="./images/linkedin.png"
+                alt=""
+                width="28"
+                height="28"
+                loading="lazy"
+              />
             </li>
           </ul>
         </div>
@@ -923,13 +904,17 @@
             <p>
               <strong>Pour me contacter :</strong>
               <a
-                href="https://wa.me/261387587959"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
                 class="lien-whatsapp"
                 aria-label="Me contacter sur WhatsApp"
-                >+261 38 75 879 59</a
+                data-numero="261387587959"
+                onclick="
+                  ouvrirWhatsApp('261387587959');
+                  return false;
+                "
               >
+                +261 38 75 879 59
+              </a>
             </p>
           </section>
 
@@ -994,7 +979,7 @@
           onclick="fermerLightbox()"
           aria-label="Fermer"
         >
-          x
+          X
         </button>
         <img src="" alt="" id="lightbox-image" />
         <div class="titre-lightbox" id="lightbox-titre"></div>

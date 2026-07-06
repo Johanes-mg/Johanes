@@ -1,11 +1,11 @@
 "use strict";
 
-// Fonction utilitaire
+// ===== FONCTION UTILITAIRE =====
 const basculerClasse = function (e) {
   e.classList.toggle("actif");
 };
 
-// Barre latérale
+// ===== BARRE LATÉRALE =====
 const barreLaterale = document.querySelector("[data-barre]");
 const boutonInfo = document.querySelector("[data-btn-info]");
 if (boutonInfo) {
@@ -14,7 +14,7 @@ if (boutonInfo) {
   });
 }
 
-// Filtres projets
+// ===== FILTRES PROJETS =====
 const selectFiltre = document.querySelector("[data-select]");
 const itemsSelect = document.querySelectorAll("[data-select-item]");
 const valeurSelect = document.querySelector("[data-select-valeur]");
@@ -66,7 +66,35 @@ boutonsFiltre.forEach(function (btn) {
   });
 });
 
-// Formulaire de contact
+// ===== WHATSAPP : OUVERTURE INTELLIGENTE =====
+function ouvrirWhatsApp(numero, texte) {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const message = texte ? `?text=${encodeURIComponent(texte)}` : "";
+
+  // Vérifier si WhatsApp est installé sur Android
+  if (isMobile && /Android/i.test(navigator.userAgent)) {
+    // Tentative d'ouverture avec intent
+    const intent = `intent://send/${numero}${message ? "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F${numero}${message};end" : "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;end"}`;
+
+    // Ouvrir avec intent
+    const win = window.open(intent, "_system");
+
+    // Fallback si l'appli n'est pas installée
+    setTimeout(function () {
+      if (!win || win.closed || typeof win.closed === "undefined") {
+        window.location.href = `https://wa.me/${numero}${message}`;
+      }
+    }, 800);
+  } else if (isMobile && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    // iOS : utiliser l'URL directe (ouvre l'appli)
+    window.location.href = `https://wa.me/${numero}${message}`;
+  } else {
+    // Ordinateur : WhatsApp Web dans un nouvel onglet
+    window.open(`https://wa.me/${numero}${message}`, "_blank");
+  }
+}
+
+// ===== FORMULAIRE DE CONTACT =====
 const formulaire = document.querySelector("[data-formulaire]");
 const champsFormulaire = document.querySelectorAll("[data-champ]");
 const boutonEnvoi = document.querySelector("[data-btn-formulaire]");
@@ -92,41 +120,31 @@ if (formulaire) {
     if (message) {
       const numero = "261387587959";
       const texte = `Bonjour, je suis ${nom}.%0A%0A${message}`;
-      const whatsappLink = `https://wa.me/${numero}?text=${texte}`;
-
-      window.open(whatsappLink, "_blank");
-
+      ouvrirWhatsApp(numero, texte);
       this.reset();
       boutonEnvoi.setAttribute("disabled", "");
     }
   });
 }
 
-// Navigation pages
+// ===== NAVIGATION PAGES =====
 const liensNavigation = document.querySelectorAll("[data-page-nav]");
 const pages = document.querySelectorAll("[data-page]");
 
 liensNavigation.forEach(function (lien) {
   lien.addEventListener("click", function () {
-    // Récupérer le nom de la page cliquée
     const nomPage = this.textContent.toLowerCase().trim();
 
-    // Parcourir toutes les pages
     pages.forEach(function (page) {
-      // Récupérer le nom de la page depuis data-page
       const nomPageActuelle = page.dataset.page.toLowerCase().trim();
-
-      // Si c'est la page cliquée, on l'affiche
       if (nomPage === nomPageActuelle) {
         page.classList.add("actif");
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        // Sinon on la cache
         page.classList.remove("actif");
       }
     });
 
-    // Mettre à jour les boutons de navigation
     liensNavigation.forEach(function (nav) {
       nav.classList.remove("actif");
       nav.removeAttribute("aria-current");
@@ -134,14 +152,13 @@ liensNavigation.forEach(function (lien) {
     this.classList.add("actif");
     this.setAttribute("aria-current", "page");
 
-    // Fermer la barre latérale sur mobile
     if (window.innerWidth < 1024 && barreLaterale) {
       barreLaterale.classList.remove("actif");
     }
   });
 });
 
-// Bouton thème
+// ===== BOUTON THÈME =====
 let themeSombre = true;
 
 function basculerTheme() {
@@ -181,7 +198,7 @@ try {
   console.warn("LocalStorage non disponible");
 }
 
-// Lightbox
+// ===== LIGHTBOX =====
 function ouvrirLightbox(src, titre) {
   const overlay = document.querySelector(".lightbox-overlay");
   const image = document.getElementById("lightbox-image");
@@ -196,8 +213,9 @@ function ouvrirLightbox(src, titre) {
   overlay.classList.add("actif");
   document.body.style.overflow = "hidden";
 
-  // Focus sur la lightbox pour l'accessibilité
-  setTimeout(() => overlay.focus(), 100);
+  setTimeout(function () {
+    overlay.focus();
+  }, 100);
 }
 
 function fermerLightbox() {
@@ -223,3 +241,25 @@ if (overlay) {
     }
   });
 }
+
+// ===== GESTION DES LIENS WHATSAPP =====
+// Remplacer les liens WhatsApp par la fonction intelligente
+document.querySelectorAll(".lien-whatsapp").forEach(function (lien) {
+  // Si le lien a un data-numero, on garde l'événement onclick déjà présent
+  // Sinon, on ajoute un comportement par défaut
+  if (!lien.hasAttribute("data-numero")) {
+    const href = lien.getAttribute("href") || "";
+    const match = href.match(/(\d{10,15})/);
+    if (match) {
+      lien.setAttribute("data-numero", match[1]);
+      lien.setAttribute("href", "#");
+      lien.addEventListener("click", function (e) {
+        e.preventDefault();
+        const numero = this.getAttribute("data-numero");
+        if (numero) {
+          ouvrirWhatsApp(numero);
+        }
+      });
+    }
+  }
+});
