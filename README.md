@@ -2,11 +2,11 @@
 
 Colorons le monde au-dela des lignes🎨
 
-## 🚀 À propos
+## 🎗️ À propos
 
 Je suis Johanès Falitiana, un développeur polyvalent spécialisé dans le développement desktop, mobile et web. Ce portfolio présente mes compétences, mes projets et mon parcours.
 
-## ✨ Fonctionnalités
+## 👾 Fonctionnalités
 
 - 📱 **Design responsive** - Adapté à tous les écrans (mobile, tablette, desktop)
 - 🌓 **Thème clair/sombre** - Avec sauvegarde automatique dans le navigateur
