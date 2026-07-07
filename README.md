@@ -74,8 +74,5 @@ Ce projet est open source et disponible sous licence MIT.
     Tous les contributeurs et visiteurs
 
 © 2026 Johanès Falitiana
-text
 
-
----
 ```
