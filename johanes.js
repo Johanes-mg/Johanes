@@ -30,21 +30,11 @@ if (selectFiltre) {
   });
 }
 
-itemsSelect.forEach(function (item) {
-  item.addEventListener("click", function () {
-    const valeur = this.textContent.toLowerCase();
-    valeurSelect.textContent = this.textContent;
-    basculerClasse(selectFiltre);
-    if (selectFiltre) {
-      selectFiltre.setAttribute("aria-expanded", "false");
-    }
-    filtrerProjets(valeur);
-  });
-});
-
 const filtrerProjets = function (categorie) {
   itemsProjets.forEach(function (projet) {
-    if (categorie === "tous" || categorie === projet.dataset.categorie) {
+    const categorieProjet = projet.dataset.categorie;
+    // Afficher si "tous" ou si la catégorie correspond
+    if (categorie === "tous" || categorie === categorieProjet) {
       projet.classList.add("actif");
     } else {
       projet.classList.remove("actif");
@@ -52,12 +42,44 @@ const filtrerProjets = function (categorie) {
   });
 };
 
+itemsSelect.forEach(function (item) {
+  item.addEventListener("click", function () {
+    // Récupérer la catégorie depuis l'attribut data-categorie du bouton
+    const categorie = this.dataset.categorie || this.textContent.toLowerCase();
+    // Mettre à jour le texte affiché
+    valeurSelect.textContent = this.textContent;
+    // Fermer le menu déroulant
+    basculerClasse(selectFiltre);
+    if (selectFiltre) {
+      selectFiltre.setAttribute("aria-expanded", "false");
+    }
+    // Filtrer les projets
+    filtrerProjets(categorie);
+
+    // Mettre à jour les boutons de filtre
+    boutonsFiltre.forEach(function (btn) {
+      btn.classList.remove("actif");
+      btn.setAttribute("aria-selected", "false");
+      const btnCategorie =
+        btn.dataset.categorie || btn.textContent.toLowerCase();
+      if (btnCategorie === categorie) {
+        btn.classList.add("actif");
+        btn.setAttribute("aria-selected", "true");
+      }
+    });
+  });
+});
+
 let dernierBoutonClique = boutonsFiltre[0];
 boutonsFiltre.forEach(function (btn) {
   btn.addEventListener("click", function () {
-    const valeur = this.textContent.toLowerCase();
+    // Récupérer la catégorie depuis l'attribut data-categorie
+    const categorie = this.dataset.categorie || this.textContent.toLowerCase();
+    // Mettre à jour le texte du select
     valeurSelect.textContent = this.textContent;
-    filtrerProjets(valeur);
+    // Filtrer les projets
+    filtrerProjets(categorie);
+    // Mettre à jour l'état des boutons
     dernierBoutonClique.classList.remove("actif");
     dernierBoutonClique.removeAttribute("aria-selected");
     this.classList.add("actif");

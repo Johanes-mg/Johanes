@@ -20,12 +20,6 @@
     <title>Portfolio - Johanès Falitiana</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="./johanes.css" />
   </head>
 
@@ -37,7 +31,7 @@
           <figure class="cadre-avatar">
             <img
               src="./images/j.png"
-              alt=""
+              alt="Avatar de Johanès Falitiana"
               width="80"
               height="80"
               loading="lazy"
@@ -58,7 +52,7 @@
             <span>Afficher les contacts</span>
             <img
               src="./images/icone-fleche-bas.png"
-              alt=""
+              alt="Flèche vers le bas"
               width="16"
               height="16"
               loading="lazy"
@@ -79,7 +73,7 @@
             >
               <img
                 src="./images/icone-soleil.png"
-                alt=""
+                alt="Activer le thème clair"
                 id="theme-icon"
                 width="24"
                 height="24"
@@ -95,7 +89,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/gmail.png"
-                  alt=""
+                  alt="Icône Gmail"
                   width="18"
                   height="18"
                   loading="lazy"
@@ -116,7 +110,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/telephone.png"
-                  alt=""
+                  alt="Icône téléphone"
                   width="18"
                   height="18"
                   loading="lazy"
@@ -143,7 +137,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/calendar.png"
-                  alt=""
+                  alt="Icône calendrier"
                   width="18"
                   height="18"
                   loading="lazy"
@@ -159,7 +153,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/madagascar.png"
-                  alt=""
+                  alt="Drapeau de Madagascar"
                   width="18"
                   height="18"
                   loading="lazy"
@@ -179,7 +173,7 @@
             <li class="item-reseau">
               <img
                 src="./images/facebook.png"
-                alt=""
+                alt="Icône Facebook"
                 width="28"
                 height="28"
                 loading="lazy"
@@ -188,7 +182,7 @@
             <li class="item-reseau">
               <img
                 src="./images/twitter.png"
-                alt=""
+                alt="Icône Twitter"
                 width="28"
                 height="28"
                 loading="lazy"
@@ -197,7 +191,7 @@
             <li class="item-reseau">
               <img
                 src="./images/linkedin.png"
-                alt=""
+                alt="Icône LinkedIn"
                 width="28"
                 height="28"
                 loading="lazy"
@@ -264,7 +258,7 @@
                 <div class="boite-icone-service">
                   <img
                     src="./images/icon-code.png"
-                    alt=""
+                    alt="Icône de code"
                     width="40"
                     height="40"
                     loading="lazy"
@@ -285,7 +279,7 @@
                 <div class="boite-icone-service">
                   <img
                     src="./images/icone-web.png"
-                    alt=""
+                    alt="Icône de développement web"
                     width="40"
                     height="40"
                     loading="lazy"
@@ -304,7 +298,7 @@
                 <div class="boite-icone-service">
                   <img
                     src="./images/icone-multimedia.png"
-                    alt=""
+                    alt="Icône multimédia"
                     width="40"
                     height="40"
                     loading="lazy"
@@ -323,7 +317,7 @@
                 <div class="boite-icone-service">
                   <img
                     src="./images/icone-bureautic.png"
-                    alt=""
+                    alt="Icône de bureautique"
                     width="40"
                     height="40"
                     loading="lazy"
@@ -354,7 +348,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/icone-academic.png"
-                  alt=""
+                  alt="Icône académique"
                   width="20"
                   height="20"
                   loading="lazy"
@@ -398,7 +392,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/icone-formation.png"
-                  alt=""
+                  alt="Icône de formation"
                   width="20"
                   height="20"
                   loading="lazy"
@@ -438,7 +432,7 @@
               <div class="boite-icone">
                 <img
                   src="./images/icone-xp.png"
-                  alt=""
+                  alt="Icône d'expérience"
                   width="20"
                   height="20"
                   loading="lazy"
@@ -631,20 +625,41 @@
             <!-- Filtres -->
             <ul class="liste-filtres" role="tablist">
               <li class="item-filtre" role="tab">
-                <button class="actif" data-btn-filtre aria-selected="true">
+                <button
+                  class="actif"
+                  data-btn-filtre
+                  aria-selected="true"
+                  data-categorie="tous"
+                >
                   Tous
                 </button>
               </li>
               <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">Web</button>
+                <button
+                  data-btn-filtre
+                  aria-selected="false"
+                  data-categorie="web"
+                >
+                  Web
+                </button>
               </li>
               <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">
+                <button
+                  data-btn-filtre
+                  aria-selected="false"
+                  data-categorie="applications"
+                >
                   Applications
                 </button>
               </li>
               <li class="item-filtre" role="tab">
-                <button data-btn-filtre aria-selected="false">Outils</button>
+                <button
+                  data-btn-filtre
+                  aria-selected="false"
+                  data-categorie="outils"
+                >
+                  Outils
+                </button>
               </li>
             </ul>
 
@@ -662,7 +677,7 @@
                 <span class="icone-select">
                   <img
                     src="./images/icone-fleche-bas.png"
-                    alt=""
+                    alt="Ouvrir le menu de sélection"
                     width="16"
                     height="16"
                     loading="lazy"
@@ -672,22 +687,27 @@
 
               <ul class="liste-select" role="listbox">
                 <li class="item-select" role="option">
-                  <button data-select-item>Tous</button>
+                  <button data-select-item data-categorie="tous">Tous</button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item>Web</button>
+                  <button data-select-item data-categorie="web">Web</button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item>Applications</button>
+                  <button data-select-item data-categorie="applications">
+                    Applications
+                  </button>
                 </li>
                 <li class="item-select" role="option">
-                  <button data-select-item>Outils</button>
+                  <button data-select-item data-categorie="outils">
+                    Outils
+                  </button>
                 </li>
               </ul>
             </div>
 
             <!-- Liste des projets -->
             <ul class="liste-projets">
+              <!-- Projet RAMP -->
               <li
                 class="item-projet actif"
                 data-filtre-item
@@ -705,7 +725,7 @@
                     <div class="icone-oeil">
                       <img
                         src="./images/search.png"
-                        alt=""
+                        alt="Agrandir l'image"
                         width="24"
                         height="24"
                         loading="lazy"
@@ -713,7 +733,7 @@
                     </div>
                     <img
                       src="./images/projet-ramp.png"
-                      alt=""
+                      alt="Capture d'écran du projet RAMP"
                       loading="lazy"
                       width="400"
                       height="250"
@@ -722,8 +742,19 @@
                   <h3 class="titre-projet">RAMP</h3>
                   <p class="categorie-projet">Web - HTML5, CSS3, JavaScript</p>
                 </a>
+                <div class="info-projet">
+                  <a
+                    href="https://johanes-mg.github.io/Outils-Ramp/ramp.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="lien-projet"
+                  >
+                    Lien
+                  </a>
+                </div>
               </li>
 
+              <!-- Projet JojohExpress -->
               <li
                 class="item-projet actif"
                 data-filtre-item
@@ -744,7 +775,7 @@
                     <div class="icone-oeil">
                       <img
                         src="./images/search.png"
-                        alt=""
+                        alt="Agrandir l'image"
                         width="24"
                         height="24"
                         loading="lazy"
@@ -752,7 +783,7 @@
                     </div>
                     <img
                       src="./images/projet-jojohexpress.png"
-                      alt=""
+                      alt="Capture d'écran du projet JojohExpress"
                       loading="lazy"
                       width="400"
                       height="250"
@@ -761,8 +792,18 @@
                   <h3 class="titre-projet">JojohExpress</h3>
                   <p class="categorie-projet">Web - HTML5, CSS3, JS, PHP</p>
                 </a>
+                <div class="info-projet">
+                  <a
+                    href="javascript:void(0)"
+                    onclick="return false;"
+                    class="lien-projet lien-grise"
+                  >
+                    Lien
+                  </a>
+                </div>
               </li>
 
+              <!-- Projet Schoolar -->
               <li
                 class="item-projet actif"
                 data-filtre-item
@@ -780,7 +821,7 @@
                     <div class="icone-oeil">
                       <img
                         src="./images/search.png"
-                        alt=""
+                        alt="Agrandir l'image"
                         width="24"
                         height="24"
                         loading="lazy"
@@ -788,7 +829,7 @@
                     </div>
                     <img
                       src="./images/projet-schoolar.png"
-                      alt=""
+                      alt="Capture d'écran du projet Schoolar"
                       loading="lazy"
                       width="400"
                       height="250"
@@ -797,8 +838,18 @@
                   <h3 class="titre-projet">Schoolar</h3>
                   <p class="categorie-projet">Web - React, PHP, Chart.js</p>
                 </a>
+                <div class="info-projet">
+                  <a
+                    href="javascript:void(0)"
+                    onclick="return false;"
+                    class="lien-projet lien-grise"
+                  >
+                    Lien
+                  </a>
+                </div>
               </li>
 
+              <!-- Projet CopyBoost -->
               <li
                 class="item-projet actif"
                 data-filtre-item
@@ -819,7 +870,7 @@
                     <div class="icone-oeil">
                       <img
                         src="./images/search.png"
-                        alt=""
+                        alt="Agrandir l'image"
                         width="24"
                         height="24"
                         loading="lazy"
@@ -827,7 +878,7 @@
                     </div>
                     <img
                       src="./images/projet-copyboost.png"
-                      alt=""
+                      alt="Capture d'écran du projet CopyBoost"
                       loading="lazy"
                       width="400"
                       height="250"
@@ -838,8 +889,18 @@
                     Outils - C#, .NET 8.0, Robocopy
                   </p>
                 </a>
+                <div class="info-projet">
+                  <a
+                    href="javascript:void(0)"
+                    onclick="return false;"
+                    class="lien-projet lien-grise"
+                  >
+                    Lien
+                  </a>
+                </div>
               </li>
 
+              <!-- Projet JBacc -->
               <li
                 class="item-projet actif"
                 data-filtre-item
@@ -857,7 +918,7 @@
                     <div class="icone-oeil">
                       <img
                         src="./images/search.png"
-                        alt=""
+                        alt="Agrandir l'image"
                         width="24"
                         height="24"
                         loading="lazy"
@@ -865,7 +926,7 @@
                     </div>
                     <img
                       src="./images/projet-jbacc.png"
-                      alt=""
+                      alt="Capture d'écran du projet JBacc"
                       loading="lazy"
                       width="400"
                       height="250"
@@ -874,6 +935,15 @@
                   <h3 class="titre-projet">JBacc</h3>
                   <p class="categorie-projet">Application - Kotlin, Android</p>
                 </a>
+                <div class="info-projet">
+                  <a
+                    href="javascript:void(0)"
+                    onclick="return false;"
+                    class="lien-projet lien-grise"
+                  >
+                    Lien
+                  </a>
+                </div>
               </li>
             </ul>
           </section>
@@ -937,7 +1007,7 @@
               >
                 <img
                   src="./images/send.png"
-                  alt=""
+                  alt="Icône d'envoi"
                   width="18"
                   height="18"
                   loading="lazy"
@@ -962,11 +1032,11 @@
         <button
           class="btn-fermer-lightbox"
           onclick="fermerLightbox()"
-          aria-label="Fermer"
+          aria-label="Fermer l'agrandissement"
         >
-          X
+          ✕
         </button>
-        <img src="" alt="" id="lightbox-image" />
+        <img src="" alt="Image agrandie du projet" id="lightbox-image" />
         <div class="titre-lightbox" id="lightbox-titre"></div>
       </div>
     </div>
