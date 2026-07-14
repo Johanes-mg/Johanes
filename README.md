@@ -43,6 +43,7 @@ Johanes/
 | **Schoolar**     | Application éducative | React, PHP, Chart.js    |
 | **CopyBoost**    | Outil de copie        | C#, .NET 8.0, Robocopy  |
 | **JBacc**        | Application mobile    | Kotlin, Android         |
+| **JNotes**       | Application mobile    | Kotlin, Android         |
 
 ## 📧 Contact
 
