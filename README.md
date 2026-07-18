@@ -11,6 +11,27 @@ Je suis Johanès Falitiana, un développeur polyvalent spécialisé dans le dév
 - **HTML5**
 - **CSS3**
 - **JavaScript**
+- 
+---
+
+## 📸 Captures d'écran
+
+### 🏠 Page d'accueil (Mode Clair)
+<img src="captures/accueil.png" width="600"/>
+
+### 🌙 Page d'accueil (Mode Sombre)
+<img src="captures/accueildark.png" width="600"/>
+
+### 📞 Page de contact
+<img src="captures/contact.png" width="600"/>
+
+### 📂 Projets
+<img src="captures/projets.png" width="600"/>
+
+### 🛠️ Compétences
+<img src="captures/skills.png" width="600"/>
+
+---
 
 ## 📂 Structure du projet
 
@@ -23,6 +44,7 @@ Johanes/
 ├── johanes.js # Fonctionnalités JavaScript
 
     └── images/ # Images et icônes
+├── captures/ # Images
 
 ## 📊 Compétences
 
