@@ -1,2 +1,4 @@
 code_source.txt
 *.txt
+.vscode/
+.vscode/**/*
