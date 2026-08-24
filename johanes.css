@@ -225,6 +225,149 @@ main {
   filter: none;
 }
 
+/* ===== STYLES POUR LE CV ===== */
+.btn-cv {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-cv:hover {
+  background: #3a3a3a;
+  border-color: #8b5cf6;
+}
+.btn-cv img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  filter: none;
+}
+
+.section-cv {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #2a2a2a;
+}
+
+.cv-container {
+  background: #222;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.cv-description {
+  color: #ccc;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cv-boutons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-cv-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #2a2a2a;
+  color: #8b5cf6;
+  border: 1px solid #333;
+  transition: none;
+}
+.btn-cv-action:hover {
+  background: #3a3a3a;
+  border-color: #8b5cf6;
+}
+.btn-cv-action img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  filter: none;
+}
+
+.btn-telecharger {
+  background: #8b5cf6;
+  color: #fff;
+  border-color: #8b5cf6;
+}
+.btn-telecharger:hover {
+  background: #7c3aed;
+  border-color: #7c3aed;
+}
+.btn-telecharger img {
+  filter: brightness(0) invert(1);
+}
+
+/* ===== THEME CLAIR - CV ===== */
+body.theme-clair .btn-cv {
+  background: #e8edf8;
+  border-color: #d0d8e8;
+}
+body.theme-clair .btn-cv:hover {
+  background: #d0d8e8;
+  border-color: #4f46e5;
+}
+
+body.theme-clair .section-cv {
+  border-top-color: #d0d8e8;
+}
+
+body.theme-clair .cv-container {
+  background: #e8edf8;
+}
+
+body.theme-clair .cv-description {
+  color: #2a2a4a;
+}
+
+body.theme-clair .btn-cv-action {
+  background: #f0f2f5;
+  color: #4f46e5;
+  border-color: #d0d8e8;
+}
+body.theme-clair .btn-cv-action:hover {
+  background: #e8edf8;
+  border-color: #4f46e5;
+}
+
+body.theme-clair .btn-telecharger {
+  background: #4f46e5;
+  color: #fff;
+  border-color: #4f46e5;
+}
+body.theme-clair .btn-telecharger:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+}
+
+/* ===== RESPONSIVE CV ===== */
+@media (max-width: 480px) {
+  .cv-boutons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-cv-action {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 .liste-contacts {
   display: grid;
   grid-template-columns: 1fr;

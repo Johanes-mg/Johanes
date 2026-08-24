@@ -63,8 +63,11 @@
         <div class="info-sup">
           <div class="separateur"></div>
 
-          <!-- Bouton thème -->
-          <div class="theme-toggle-wrapper">
+          <!-- Boutons thème et CV -->
+          <div
+            class="theme-toggle-wrapper"
+            style="display: flex; gap: 15px; justify-content: center"
+          >
             <button
               class="btn-theme"
               onclick="basculerTheme()"
@@ -75,6 +78,20 @@
                 src="./images/icone-soleil.png"
                 alt="Activer le thème clair"
                 id="theme-icon"
+                width="24"
+                height="24"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="btn-theme btn-cv"
+              onclick="ouvrirCV()"
+              title="Voir mon CV"
+              aria-label="Voir mon CV"
+            >
+              <img
+                src="./images/icone-cv.png"
+                alt="Icône CV"
                 width="24"
                 height="24"
                 loading="lazy"
@@ -333,6 +350,42 @@
                 </div>
               </li>
             </ul>
+          </section>
+
+          <!-- Section CV -->
+          <section class="section-cv">
+            <h3 class="titre-service">Mon CV</h3>
+            <div class="cv-container">
+              <p class="cv-description">
+                Téléchargez ou consultez mon CV pour en savoir plus sur mon
+                parcours, mes compétences et mes expériences.
+              </p>
+              <div class="cv-boutons">
+                <button class="btn-cv-action" onclick="ouvrirCV()">
+                  <img
+                    src="./images/icone-oeil.png"
+                    alt="Voir"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                  Voir le CV
+                </button>
+                <button
+                  class="btn-cv-action btn-telecharger"
+                  onclick="telechargerCV()"
+                >
+                  <img
+                    src="./images/icone-telecharger.png"
+                    alt="Télécharger"
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                  Télécharger
+                </button>
+              </div>
+            </div>
           </section>
         </article>
 

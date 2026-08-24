@@ -266,3 +266,21 @@ if (overlay) {
     }
   });
 }
+
+// ===== CV (PDF) =====
+const NOM_FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
+
+function ouvrirCV() {
+  // Ouvrir le PDF dans un nouvel onglet
+  window.open(NOM_FICHIER_CV, "_blank");
+}
+
+function telechargerCV() {
+  // Créer un lien de téléchargement
+  const lien = document.createElement("a");
+  lien.href = NOM_FICHIER_CV;
+  lien.download = "CV_Johanes_Falitiana.pdf";
+  document.body.appendChild(lien);
+  lien.click();
+  document.body.removeChild(lien);
+}
