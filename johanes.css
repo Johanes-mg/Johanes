@@ -1880,3 +1880,84 @@ body.theme-clair .btn-fermer-lightbox:hover {
     padding-top: 10px;
   }
 }
+/* ===== DESCRIPTIONS PROJETS ===== */
+.description-projet {
+  padding: 10px 15px 0 15px;
+  text-align: center;
+}
+
+.description-projet p {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Theme clair */
+body.theme-clair .description-projet p {
+  color: #2a2a4a;
+}
+
+/* Responsive */
+@media (min-width: 580px) {
+  .description-projet {
+    padding: 12px 20px 0 20px;
+  }
+  .description-projet p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .description-projet {
+    padding: 10px 15px 0 15px;
+    min-height: 50px;
+  }
+  .description-projet p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: 1250px) {
+  .description-projet p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 480px) {
+  .description-projet {
+    padding: 8px 10px 0 10px;
+  }
+  .description-projet p {
+    font-size: 12px;
+  }
+}
+/* ===== BORDURE NOIRE POUR CHAQUE PROJET ===== */
+.item-projet {
+  background: #1a1a1a;
+  border: 2px solid #0d0d0d;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: none;
+}
+
+.item-projet > a {
+  display: block;
+}
+
+/* Theme clair */
+body.theme-clair .item-projet {
+  background: #f0f2f5;
+  border-color: #d0d8e8;
+}
+
+/* Responsive */
+@media (min-width: 580px) {
+  .item-projet {
+    border-width: 2px;
+  }
+}
