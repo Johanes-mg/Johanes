@@ -226,28 +226,6 @@ main {
 }
 
 /* ===== STYLES POUR LE CV ===== */
-.btn-cv {
-  background: #2a2a2a;
-  border: 1px solid #333;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-.btn-cv:hover {
-  background: #3a3a3a;
-  border-color: #8b5cf6;
-}
-.btn-cv img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: none;
-}
-
 .section-cv {
   margin-top: 40px;
   padding-top: 30px;
@@ -315,15 +293,6 @@ main {
 }
 
 /* ===== THEME CLAIR - CV ===== */
-body.theme-clair .btn-cv {
-  background: #e8edf8;
-  border-color: #d0d8e8;
-}
-body.theme-clair .btn-cv:hover {
-  background: #d0d8e8;
-  border-color: #4f46e5;
-}
-
 body.theme-clair .section-cv {
   border-top-color: #d0d8e8;
 }
