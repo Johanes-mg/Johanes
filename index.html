@@ -86,10 +86,7 @@
               </div>
               <div class="info-contact">
                 <p class="titre-contact">Email</p>
-                <a
-                  href="mailto:falitianajohanes@gmail.com"
-                  class="lien-contact"
-                  aria-label="Envoyer un email"
+                <a href="mailto:falitianajohanes@gmail.com" class="lien-contact"
                   >johanesfalitiana@gmail.com</a
                 >
               </div>
@@ -107,17 +104,12 @@
               <div class="info-contact">
                 <p class="titre-contact">Téléphone</p>
                 <a
-                  href="#"
+                  href="https://wa.me/261387587959"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   class="lien-contact lien-whatsapp"
-                  aria-label="Contacter via WhatsApp"
-                  data-numero="261387587959"
-                  onclick="
-                    ouvrirWhatsApp('261387587959');
-                    return false;
-                  "
+                  >0387587959</a
                 >
-                  0387587959
-                </a>
               </div>
             </li>
 
@@ -694,7 +686,6 @@
               </div>
 
               <ul class="liste-competences">
-                <!-- UI/UX Design -->
                 <li class="item-competence carte-contenu">
                   <div class="en-tete-competence">
                     <div class="boite-icone-competence">
@@ -722,7 +713,6 @@
                   </ul>
                 </li>
 
-                <!-- Retouche & Création -->
                 <li class="item-competence carte-contenu">
                   <div class="en-tete-competence">
                     <div class="boite-icone-competence">
@@ -750,7 +740,6 @@
                   </ul>
                 </li>
 
-                <!-- Création Musicale -->
                 <li class="item-competence carte-contenu">
                   <div class="en-tete-competence">
                     <div class="boite-icone-competence">
@@ -1289,65 +1278,91 @@
             <h2 class="titre-article">Contact</h2>
           </header>
 
-          <section class="info-contact-simple">
-            <p>
-              <strong>Pour me contacter :</strong>
-              <a
-                href="#"
-                class="lien-whatsapp"
-                aria-label="Me contacter sur WhatsApp"
-                data-numero="261387587959"
-                onclick="
-                  ouvrirWhatsApp('261387587959');
-                  return false;
-                "
-              >
-                +261 38 75 879 59
-              </a>
+          <section class="contact-section">
+            <p class="contact-intro">
+              Choisissez votre méthode de contact préférée :
             </p>
-          </section>
 
-          <section class="formulaire-contact">
-            <h3 class="titre-formulaire">Envoyez-moi un message</h3>
-
-            <form action="#" class="formulaire" data-formulaire novalidate>
-              <div class="groupe-champs">
-                <input
-                  type="text"
-                  name="nom"
-                  class="champ-formulaire"
-                  placeholder="Nom complet"
-                  required
-                  aria-required="true"
-                  data-champ
-                />
+            <!-- Switch 3 positions -->
+            <div class="switch-container" data-switch-container>
+              <div class="switch-track">
+                <button
+                  class="switch-option switch-gauche"
+                  data-switch="gmail"
+                  aria-label="Contacter via Gmail"
+                >
+                  <img
+                    src="./images/gmail.png"
+                    width="22"
+                    height="22"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="switch-option switch-centre actif"
+                  data-switch="whatsapp"
+                  aria-label="Contacter via WhatsApp"
+                >
+                  <img
+                    src="./images/telephone.png"
+                    width="22"
+                    height="22"
+                    loading="lazy"
+                  />
+                </button>
+                <button
+                  class="switch-option switch-droite"
+                  data-switch="linkedin"
+                  aria-label="Contacter via LinkedIn"
+                >
+                  <img
+                    src="./images/linkedin.png"
+                    width="22"
+                    height="22"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="switch-curseur" data-switch-curseur></div>
               </div>
+            </div>
 
-              <textarea
-                name="message"
-                class="champ-formulaire"
-                placeholder="Votre message"
-                required
-                aria-required="true"
-                data-champ
-              ></textarea>
-
+            <!-- Bouton de redirection -->
+            <div class="contact-action">
               <button
-                class="btn-formulaire"
-                type="submit"
-                disabled
-                data-btn-formulaire
-                aria-label="Envoyer le message"
+                class="btn-contact"
+                data-btn-contact
+                aria-label="Me contacter"
               >
                 <img
                   src="./images/send.png"
-                  width="18"
-                  height="18"
+                  width="20"
+                  height="20"
                   loading="lazy"
                 />
-                <span>Envoyer</span>
+                <span>Me contacter</span>
               </button>
-            </form>
+            </div>
+
+            <!-- Infos de contact -->
+            <div class="contact-info-badge">
+              <div class="badge-content">
+                <div class="badge-icone">
+                  <img
+                    src="./images/telephone.png"
+                    width="24"
+                    height="24"
+                    id="badge-icon"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="badge-texte">
+                  <span class="badge-methode" id="badge-methode">WhatsApp</span>
+                  <span class="badge-valeur" id="badge-valeur"
+                    >+261 38 75 879 59</span
+                  >
+                </div>
+              </div>
+            </div>
           </section>
         </article>
       </div>

@@ -77,54 +77,99 @@ boutonsFiltre.forEach(function (btn) {
   });
 });
 
-// ===== WHATSAPP =====
-function ouvrirWhatsApp(numero, texte) {
-  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const messageEncoded = texte ? encodeURIComponent(texte) : "";
-  const messageParam = messageEncoded ? `?text=${messageEncoded}` : "";
+// ===== SWITCH 3 POSITIONS =====
+const switchOptions = document.querySelectorAll("[data-switch]");
+const switchCurseur = document.querySelector("[data-switch-curseur]");
+const btnContact = document.querySelector("[data-btn-contact]");
+const badgeIcon = document.getElementById("badge-icon");
+const badgeMethode = document.getElementById("badge-methode");
+const badgeValeur = document.getElementById("badge-valeur");
 
-  if (isMobile && /Android/i.test(navigator.userAgent)) {
-    const intent = `intent://send/${numero}${messageParam ? "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;S.browser_fallback_url=https%3A%2F%2Fwa.me%2F${numero}${messageParam};end" : "#Intent;action=android.intent.action.VIEW;scheme=https;package=com.whatsapp;end"}`;
-    const win = window.open(intent, "_system");
-    setTimeout(function () {
-      if (!win || win.closed || typeof win.closed === "undefined") {
-        window.location.href = `https://wa.me/${numero}${messageParam}`;
-      }
-    }, 800);
-  } else if (isMobile && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    window.location.href = `https://wa.me/${numero}${messageParam}`;
-  } else {
-    window.open(`https://wa.me/${numero}${messageParam}`, "_blank");
+const INFOS = {
+  whatsapp: {
+    icone: "./images/telephone.png",
+    methode: "WhatsApp",
+    valeur: "+261 38 75 879 59",
+    url: "https://wa.me/261387587959",
+  },
+  gmail: {
+    icone: "./images/gmail.png",
+    methode: "Gmail",
+    valeur: "johanesfalitiana@gmail.com",
+    url: "mailto:falitianajohanes@gmail.com",
+  },
+  linkedin: {
+    icone: "./images/linkedin.png",
+    methode: "LinkedIn",
+    valeur: "Johanès Falitiana",
+    url: "https://www.linkedin.com/in/johan%C3%A8s-falitiana-335456431",
+  },
+};
+
+let methodeActuelle = "whatsapp";
+
+function mettreAJourSwitch(methode) {
+  switchOptions.forEach(function (opt) {
+    opt.classList.remove("actif");
+    if (opt.dataset.switch === methode) {
+      opt.classList.add("actif");
+    }
+  });
+
+  switchCurseur.classList.remove(
+    "position-gauche",
+    "position-centre",
+    "position-droite",
+  );
+  switchCurseur.classList.remove(
+    "methode-whatsapp",
+    "methode-gmail",
+    "methode-linkedin",
+  );
+
+  if (methode === "gmail") {
+    switchCurseur.classList.add("position-gauche");
+    switchCurseur.classList.add("methode-gmail");
+  } else if (methode === "whatsapp") {
+    switchCurseur.classList.add("position-centre");
+    switchCurseur.classList.add("methode-whatsapp");
+  } else if (methode === "linkedin") {
+    switchCurseur.classList.add("position-droite");
+    switchCurseur.classList.add("methode-linkedin");
   }
+
+  methodeActuelle = methode;
+
+  if (btnContact) {
+    btnContact.classList.remove(
+      "methode-whatsapp",
+      "methode-gmail",
+      "methode-linkedin",
+    );
+    btnContact.classList.add("methode-" + methode);
+  }
+
+  const info = INFOS[methode];
+  if (badgeIcon) badgeIcon.src = info.icone;
+  if (badgeMethode) badgeMethode.textContent = info.methode;
+  if (badgeValeur) badgeValeur.textContent = info.valeur;
 }
 
-// ===== FORMULAIRE =====
-const formulaire = document.querySelector("[data-formulaire]");
-const champsFormulaire = document.querySelectorAll("[data-champ]");
-const boutonEnvoi = document.querySelector("[data-btn-formulaire]");
-
-champsFormulaire.forEach(function (champ) {
-  champ.addEventListener("input", function () {
-    if (formulaire && formulaire.checkValidity()) {
-      boutonEnvoi.removeAttribute("disabled");
-    } else if (boutonEnvoi) {
-      boutonEnvoi.setAttribute("disabled", "");
-    }
+switchOptions.forEach(function (option) {
+  option.addEventListener("click", function () {
+    const methode = this.dataset.switch;
+    mettreAJourSwitch(methode);
   });
 });
 
-if (formulaire) {
-  formulaire.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const nom =
-      this.querySelector('input[name="nom"]').value.trim() || "Visiteur";
-    const message = this.querySelector('textarea[name="message"]').value.trim();
-    if (message) {
-      const numero = "261387587959";
-      const texte = `Bonjour, je suis ${nom}.\n\n${message}`;
-      ouvrirWhatsApp(numero, texte);
-      this.reset();
-      boutonEnvoi.setAttribute("disabled", "");
+mettreAJourSwitch("whatsapp");
+
+// ===== BOUTON CONTACT =====
+if (btnContact) {
+  btnContact.addEventListener("click", function () {
+    const info = INFOS[methodeActuelle];
+    if (info) {
+      window.open(info.url, "_blank");
     }
   });
 }
