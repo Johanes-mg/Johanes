@@ -1022,16 +1022,45 @@ body.theme-clair .boite-icone-sous {
   left: calc(66.66% + 0px);
 }
 
+/* WhatsApp - vert */
 .switch-curseur.methode-whatsapp {
   background: #25d366;
 }
 
-.switch-curseur.methode-gmail {
-  background: #ea4335;
-}
-
+/* LinkedIn - bleu */
 .switch-curseur.methode-linkedin {
   background: #0a66c2;
+}
+
+/* Gmail - couleurs Google divisées en 4 parties égales */
+.switch-curseur.methode-gmail {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
+  background-size: 100% 100%;
+}
+
+body.theme-clair .switch-curseur.methode-gmail {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
+  background-size: 100% 100%;
 }
 
 /* ===== BOUTON CONTACT ===== */
@@ -1071,20 +1100,52 @@ body.theme-clair .boite-icone-sous {
   background: #1da851;
 }
 
-.btn-contact.methode-gmail {
-  background: #ea4335;
-}
-
-.btn-contact.methode-gmail:hover {
-  background: #d33426;
-}
-
 .btn-contact.methode-linkedin {
   background: #0a66c2;
 }
 
 .btn-contact.methode-linkedin:hover {
   background: #084a8f;
+}
+
+/* Gmail - couleurs Google divisées en 4 parties égales */
+.btn-contact.methode-gmail {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
+  color: #fff;
+  border: none;
+}
+
+.btn-contact.methode-gmail:hover {
+  filter: brightness(1.05);
+}
+
+body.theme-clair .btn-contact.methode-gmail {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
+  color: #fff;
+}
+
+body.theme-clair .btn-contact.methode-gmail:hover {
+  filter: brightness(1.05);
 }
 
 /* ===== BADGE INFO CONTACT ===== */
@@ -1119,6 +1180,35 @@ body.theme-clair .boite-icone-sous {
   width: 24px;
   height: 24px;
   filter: none;
+}
+
+/* Badge Gmail - couleurs Google divisées en 4 parties égales */
+.badge-icone.gmail-icon {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
+}
+
+body.theme-clair .badge-icone.gmail-icon {
+  background: linear-gradient(
+    to right,
+    #ea4335 0%,
+    #ea4335 25%,
+    #fbbc05 25%,
+    #fbbc05 50%,
+    #34a853 50%,
+    #34a853 75%,
+    #4285f4 75%,
+    #4285f4 100%
+  );
 }
 
 .badge-texte {
@@ -1161,10 +1251,6 @@ body.theme-clair .switch-curseur.methode-whatsapp {
   background: #25d366;
 }
 
-body.theme-clair .switch-curseur.methode-gmail {
-  background: #ea4335;
-}
-
 body.theme-clair .switch-curseur.methode-linkedin {
   background: #0a66c2;
 }
@@ -1200,14 +1286,6 @@ body.theme-clair .btn-contact.methode-whatsapp {
 
 body.theme-clair .btn-contact.methode-whatsapp:hover {
   background: #1da851;
-}
-
-body.theme-clair .btn-contact.methode-gmail {
-  background: #ea4335;
-}
-
-body.theme-clair .btn-contact.methode-gmail:hover {
-  background: #d33426;
 }
 
 body.theme-clair .btn-contact.methode-linkedin {
@@ -1255,6 +1333,37 @@ body.theme-clair .btn-contact.methode-linkedin:hover {
   .btn-contact {
     font-size: 14px;
     padding: 14px 20px;
+  }
+}
+
+@media (min-width: 580px) {
+  .switch-track {
+    width: 220px;
+    height: 54px;
+  }
+
+  .contact-info-badge {
+    max-width: 400px;
+    padding: 20px 28px;
+  }
+
+  .badge-valeur {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .switch-track {
+    width: 240px;
+    height: 56px;
+  }
+
+  .contact-info-badge {
+    max-width: 400px;
+  }
+
+  .badge-valeur {
+    font-size: 15px;
   }
 }
 
@@ -1437,20 +1546,6 @@ body.theme-clair .lien-grise {
 
   .info-projet {
     padding: 15px 15px 12px 15px;
-  }
-
-  .switch-track {
-    width: 220px;
-    height: 54px;
-  }
-
-  .contact-info-badge {
-    max-width: 400px;
-    padding: 20px 28px;
-  }
-
-  .badge-valeur {
-    font-size: 15px;
   }
 }
 
@@ -1683,19 +1778,6 @@ body.theme-clair .lien-grise {
 
   .lien-projet {
     font-size: 13px;
-  }
-
-  .switch-track {
-    width: 240px;
-    height: 56px;
-  }
-
-  .contact-info-badge {
-    max-width: 400px;
-  }
-
-  .badge-valeur {
-    font-size: 15px;
   }
 }
 
