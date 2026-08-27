@@ -984,7 +984,7 @@ body.theme-clair .boite-icone-sous {
   border-radius: 26px;
   padding: 6px;
   z-index: 2;
-  transition: none;
+  cursor: pointer;
 }
 
 .switch-option img {
@@ -992,6 +992,7 @@ body.theme-clair .boite-icone-sous {
   height: 24px;
   filter: none;
   opacity: 0.5;
+  transition: opacity 0.2s ease;
 }
 
 .switch-option.actif img {
@@ -1004,63 +1005,25 @@ body.theme-clair .boite-icone-sous {
   height: calc(100% - 8px);
   width: calc(33.33% - 4px);
   border-radius: 26px;
-  background: #8b5cf6;
+  background: #25d366;
   z-index: 1;
-  transition: none;
   left: 4px;
+  transition: left 0.3s ease;
 }
 
 .switch-curseur.position-gauche {
   left: 4px;
+  background: #ea4335;
 }
 
 .switch-curseur.position-centre {
   left: calc(33.33% + 2px);
+  background: #25d366;
 }
 
 .switch-curseur.position-droite {
   left: calc(66.66% + 0px);
-}
-
-/* WhatsApp - vert */
-.switch-curseur.methode-whatsapp {
-  background: #25d366;
-}
-
-/* LinkedIn - bleu */
-.switch-curseur.methode-linkedin {
   background: #0a66c2;
-}
-
-/* Gmail - couleurs Google divisées en 4 parties égales */
-.switch-curseur.methode-gmail {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
-  background-size: 100% 100%;
-}
-
-body.theme-clair .switch-curseur.methode-gmail {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
-  background-size: 100% 100%;
 }
 
 /* ===== BOUTON CONTACT ===== */
@@ -1082,7 +1045,7 @@ body.theme-clair .switch-curseur.methode-gmail {
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: none;
+  transition: background 0.3s ease;
 }
 
 .btn-contact img {
@@ -1108,44 +1071,12 @@ body.theme-clair .switch-curseur.methode-gmail {
   background: #084a8f;
 }
 
-/* Gmail - couleurs Google divisées en 4 parties égales */
 .btn-contact.methode-gmail {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
-  color: #fff;
-  border: none;
+  background: #ea4335;
 }
 
 .btn-contact.methode-gmail:hover {
-  filter: brightness(1.05);
-}
-
-body.theme-clair .btn-contact.methode-gmail {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
-  color: #fff;
-}
-
-body.theme-clair .btn-contact.methode-gmail:hover {
-  filter: brightness(1.05);
+  background: #d33426;
 }
 
 /* ===== BADGE INFO CONTACT ===== */
@@ -1180,35 +1111,6 @@ body.theme-clair .btn-contact.methode-gmail:hover {
   width: 24px;
   height: 24px;
   filter: none;
-}
-
-/* Badge Gmail - couleurs Google divisées en 4 parties égales */
-.badge-icone.gmail-icon {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
-}
-
-body.theme-clair .badge-icone.gmail-icon {
-  background: linear-gradient(
-    to right,
-    #ea4335 0%,
-    #ea4335 25%,
-    #fbbc05 25%,
-    #fbbc05 50%,
-    #34a853 50%,
-    #34a853 75%,
-    #4285f4 75%,
-    #4285f4 100%
-  );
 }
 
 .badge-texte {
@@ -1247,11 +1149,15 @@ body.theme-clair .switch-option.actif img {
   opacity: 1;
 }
 
-body.theme-clair .switch-curseur.methode-whatsapp {
+body.theme-clair .switch-curseur.position-gauche {
+  background: #ea4335;
+}
+
+body.theme-clair .switch-curseur.position-centre {
   background: #25d366;
 }
 
-body.theme-clair .switch-curseur.methode-linkedin {
+body.theme-clair .switch-curseur.position-droite {
   background: #0a66c2;
 }
 
@@ -1294,6 +1200,14 @@ body.theme-clair .btn-contact.methode-linkedin {
 
 body.theme-clair .btn-contact.methode-linkedin:hover {
   background: #084a8f;
+}
+
+body.theme-clair .btn-contact.methode-gmail {
+  background: #ea4335;
+}
+
+body.theme-clair .btn-contact.methode-gmail:hover {
+  background: #d33426;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -2308,10 +2222,7 @@ body.theme-clair .btn-fermer-lightbox:hover {
 .select-filtre.actif .icone-select,
 .liste-select,
 .item-select button,
-.page,
-.switch-option,
-.switch-curseur,
-.btn-contact {
+.page {
   transition: none !important;
 }
 
