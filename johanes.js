@@ -75,7 +75,7 @@ const PROJETS_DATA = [
     description: "Application de calcul de notes avec leurs catégories.",
     technologies: "Kotlin, Android",
     vignette: "iconjnotes.png",
-    prefixe: "jnotes",
+    prefixe: "jnoteskotlin",
     lien: "https://github.com/Johanes-mg/JNotes",
   },
   {
