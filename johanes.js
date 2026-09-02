@@ -18,7 +18,7 @@ const PROJETS_DATA = [
     nom: "RAMP",
     categorie: "WEB",
     description:
-      "Outil web pour générater des numéros au hasard au format Malagasy,copier des caractères UTF-8 et sélécteur de couleur.",
+      "Outil web pour générer des numéros au hasard au format Malagasy, copier des caractères UTF-8 et sélecteur de couleur.",
     technologies: "HTML5, CSS3, JavaScript",
     vignette: "iconramp.png",
     prefixe: "ramp",
@@ -29,7 +29,7 @@ const PROJETS_DATA = [
     nom: "JojohExpress",
     categorie: "WEB",
     description:
-      "Site web de réservation et de gestion de colis,d'ajouter,modifier ou effacer des conducteurs et les véhicules de transport",
+      "Site web de réservation et de gestion de colis, d'ajouter, modifier ou effacer des conducteurs et les véhicules de transport.",
     technologies: "HTML5, CSS3, JS, PHP",
     vignette: "iconjojohexpress.png",
     prefixe: "jojohexpress",
@@ -446,10 +446,6 @@ try {
 }
 
 const NOM_FICHIER_CV = "RANAIVOJAONA Falitiana Johanes.pdf";
-
-function ouvrirCV() {
-  window.open(NOM_FICHIER_CV, "_blank");
-}
 
 function telechargerCV() {
   const lien = document.createElement("a");
