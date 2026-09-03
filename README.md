@@ -2,13 +2,17 @@
 
 ## **Développeur Junior** • **Étudiant en Informatique**
 
- <a href="https://github.com/Johanes-mg">
+**Portfolio :** [https://johanes-mg.github.io](https://johanes-mg.github.io)
 
+<a href="https://github.com/Johanes-mg">
   <img src="https://img.shields.io/github/followers/Johanes-mg?label=Follow&style=flat-square&color=0366d6" alt="GitHub followers" />
-
 </a>
 
-Je suis RANAIVOJAONA Johanès Falitiana, un étudiant en 2ème année **d'Informatique Général** à **l'Ecole Nationale d'Informatique de Fianarantsoa**, passionné par le développement d'applications Web,Mobile et Desktop et l'exploration des pratiques de développement modernes.
+---
+
+## 🍀 À propos de moi
+
+Je suis RANAIVOJAONA Johanès Falitiana, un étudiant en 2ème année **d'Informatique Général** à **l'Ecole Nationale d'Informatique de Fianarantsoa**, passionné par le développement d'applications Web, Mobile et Desktop et l'exploration des pratiques de développement modernes.
 
 _"🎨Colorons le monde au-delà des lignes"_
 
@@ -54,7 +58,7 @@ _"🎨Colorons le monde au-delà des lignes"_
 
 ---
 
-## 🧣 Projets réalisés
+## 📱 Projets réalisés
 
 | Projet           | Plateformes        | Technologies utilisées  |
 | ---------------- | ------------------ | ----------------------- |
@@ -101,6 +105,7 @@ _"🎨Colorons le monde au-delà des lignes"_
 
 - **WhatsApp** : [+261 38 75 879 59](https://wa.me/261387587959)
 - **Email** : falitianajohanes@gmail.com
+- **Portfolio** : [https://johanes-mg.github.io](https://johanes-mg.github.io)
 
 ---
 
