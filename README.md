@@ -2,7 +2,7 @@
 
 ## **Développeur Junior** • **Étudiant en Informatique**
 
-**Portfolio :** [https://johanes-mg.github.io](https://johanes-mg.github.io)
+**Portfolio :** [https://johanes-mg.github.io/Johanes](https://johanes-mg.github.io/Johanes)
 
 <a href="https://github.com/Johanes-mg">
   <img src="https://img.shields.io/github/followers/Johanes-mg?label=Follow&style=flat-square&color=0366d6" alt="GitHub followers" />
